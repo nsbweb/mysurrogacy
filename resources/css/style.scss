@@ -43,7 +43,7 @@ p {
         margin-bottom: 0;       
     }
 }
-svg { max-width: 100%; }
+img, svg  { max-width: 100%; }
 
 .no-gutters {
     margin-right: 0;
@@ -104,30 +104,46 @@ svg { max-width: 100%; }
 
 /*Header CSS*/
 header {
+    &.sticky {
+        z-index: 4;
+        position: sticky;
+    }
     &.sticky .navbar {
         background-color: $color01;
-        z-index: 2;
     }
 }
-.navbar-nav  { 
-    & .nav-item {
-        & .nav-link { 
-            color: $color03;
-            font-size: 1.12rem;
-            font-weight: 400;
-        }
-        &.active .nav-link { 
-            color: $color02;
-            font-weight: 700;
-        }
-        & + .nav-item { margin-left:2rem;  }
+.navbar {
+    padding: 0;
+    & .navbar-brand {
+        padding: 0;
+        position: absolute;
+        top: 0;
     }
- }
+    .navbar-nav  { 
+        margin-bottom: 0;
+        padding: 1rem 0;
+        & .nav-item {
+            & .nav-link { 
+                color: $color03;
+                font-size: 1.12rem;
+                font-weight: 400;
+            }
+            &.active .nav-link { 
+                color: $color02;
+                font-weight: 700;
+            }
+            & + .nav-item { margin-left:2rem;  }
+        }
+    }
+}
 /*Header CSS*/
 
 
 /*Banner CSS */
-.banner { padding:3.5rem 0 0 0; 
+.banner { 
+    position: relative;
+    z-index: 1;
+    padding:3.5rem 0 0 0; 
     .text-cont{ 
         position: absolute;
         left: 0; 
@@ -157,7 +173,11 @@ header {
 
 
 /*Main Content CSS*/
-.main-content { padding:1.5rem 0; }
+.main-content { 
+    padding:1.5rem 0; 
+    position: relative;
+    z-index: 1;
+}
 
 .section { padding: 5rem 0;
     &.shade-womb { 
@@ -172,6 +192,21 @@ header {
         @include zIndexup;
         &:before { 
             @include overlay;
+        }
+        .btn-play {
+            position: absolute;
+            border: 2px solid $color02;
+            width:6rem;
+            height: 6rem;
+            left: calc(50% - 3rem);
+            top: calc(50% - 3rem);
+            color: $color02;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border-radius: 100%;
         }
      }
      .btn-loadmore {
@@ -208,6 +243,7 @@ header {
  }
 
 .center-big {
+    &.up-in { margin-top: -6rem; }
     .owl-stage-outer { padding-top: 5rem; 
         & .owl-item { 
             & div {
@@ -217,6 +253,7 @@ header {
                 opacity: 1;
                 & .img-cont { 
                     position: relative;
+                    margin: 0;
                     &:before{
                         @include fullContent;
                         transform: rotate(290deg);          
@@ -242,6 +279,19 @@ header {
                     img {            
                         filter: blur(5px);
                     }
+                    & figcaption {
+                        position: absolute;
+                        font-size: 2rem;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 8rem 9rem 0 11rem;
+                        display: none;
+                    }
                 }
                 & .text-cont {
                     display: none;
@@ -257,6 +307,9 @@ header {
                     }
                     img {            
                         filter: blur(0px);
+                    }                    
+                    & figcaption {
+                        display: block;
                     }
                 }
                 & .text-cont {

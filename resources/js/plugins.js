@@ -93,7 +93,8 @@ function l(){var a=h.exec(m[1]),f=null,g=null,n=null;a&&(null!==a[1]&&a[1]&&(f=p
 B=C?"gdi":"directwrite"}else B="unknown";A=B}
 z=A}
 y=z}
-x=y}else x=8===q.a?"directwrite":2===q.a||3===q.a?"coretext":5===q.a||4===q.a||6===q.a||7===q.a||9===q.a?"freetype":"unknown";w=x;var F=p(),G,I=p();G="unknown"!==I?I:2===q.a||4===q.a?"subpixel":1===q.a?k(q.d,new e(6,0))?"subpixel":1===q.e?k(q.f,new e(7,0))?"subpixel":"grayscale":"subpixel":"unknown";var d=b.document.documentElement;c("tr-"+w);"unknown"===F&&"unknown"!==G&&(F+="-"+G);c("tr-aa-"+F);}());/* Owl Carousel v2.3.4 */
+x=y}else x=8===q.a?"directwrite":2===q.a||3===q.a?"coretext":5===q.a||4===q.a||6===q.a||7===q.a||9===q.a?"freetype":"unknown";w=x;var F=p(),G,I=p();G="unknown"!==I?I:2===q.a||4===q.a?"subpixel":1===q.a?k(q.d,new e(6,0))?"subpixel":1===q.e?k(q.f,new e(7,0))?"subpixel":"grayscale":"subpixel":"unknown";var d=b.document.documentElement;c("tr-"+w);"unknown"===F&&"unknown"!==G&&(F+="-"+G);c("tr-aa-"+F);}());
+/* Owl Carousel v2.3.4 */
 
 /* Waypoints - 4.0.1 */
 (function(){var t=[].indexOf||function(t){for(var e=0,n=this.length;e<n;e++){if(e in this&&this[e]===t)return e}

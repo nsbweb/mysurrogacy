@@ -327,7 +327,22 @@ $owl.children().each( function( index ) {
 $owl.owlCarousel({
     center: true,
     loop: true,
-    items: 3,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:3,
+            nav:true,
+            loop:false
+        }
+    }
 });
 
 $(document).on('click', '.owl-item>div', function() {
@@ -338,7 +353,5 @@ $(document).on('click', '.owl-item>div', function() {
 
 var $owlSingle = $('.owl-cara-single');
 $owlSingle.owlCarousel({
-    center: false,
-    loop: true,
-    items: 2,
+    singleItem:true
 });

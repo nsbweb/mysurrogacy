@@ -67,7 +67,7 @@ p:last-child {
   margin-bottom: 0;
 }
 
-svg {
+img, svg {
   max-width: 100%;
 }
 
@@ -192,29 +192,51 @@ svg {
 
 /*COMMON CSS*/
 /*Header CSS*/
-header.sticky .navbar {
-  background-color: #0D1321;
-  z-index: 2;
+header.sticky {
+  z-index: 4;
+  position: -webkit-sticky;
+  position: sticky;
 }
 
-.navbar-nav .nav-item .nav-link {
+header.sticky .navbar {
+  background-color: #0D1321;
+}
+
+.navbar {
+  padding: 0;
+}
+
+.navbar .navbar-brand {
+  padding: 0;
+  position: absolute;
+  top: 0;
+}
+
+.navbar .navbar-nav {
+  margin-bottom: 0;
+  padding: 1rem 0;
+}
+
+.navbar .navbar-nav .nav-item .nav-link {
   color: #807E7E;
   font-size: 1.12rem;
   font-weight: 400;
 }
 
-.navbar-nav .nav-item.active .nav-link {
+.navbar .navbar-nav .nav-item.active .nav-link {
   color: #FFFFFF;
   font-weight: 700;
 }
 
-.navbar-nav .nav-item + .nav-item {
+.navbar .navbar-nav .nav-item + .nav-item {
   margin-left: 2rem;
 }
 
 /*Header CSS*/
 /*Banner CSS */
 .banner {
+  position: relative;
+  z-index: 1;
   padding: 3.5rem 0 0 0;
 }
 
@@ -265,6 +287,8 @@ header.sticky .navbar {
 /*Main Content CSS*/
 .main-content {
   padding: 1.5rem 0;
+  position: relative;
+  z-index: 1;
 }
 
 .section {
@@ -306,6 +330,28 @@ header.sticky .navbar {
   z-index: 1;
   background: #000000;
   opacity: 0.3;
+}
+
+.section .video-container .btn-play {
+  position: absolute;
+  border: 2px solid #FFFFFF;
+  width: 6rem;
+  height: 6rem;
+  left: calc(50% - 3rem);
+  top: calc(50% - 3rem);
+  color: #FFFFFF;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 2rem;
+  border-radius: 100%;
 }
 
 .section .btn-loadmore {
@@ -355,6 +401,10 @@ header.sticky .navbar {
   color: #807E7E;
 }
 
+.center-big.up-in {
+  margin-top: -6rem;
+}
+
 .center-big .owl-stage-outer {
   padding-top: 5rem;
 }
@@ -369,6 +419,7 @@ header.sticky .navbar {
 
 .center-big .owl-stage-outer .owl-item div .img-cont {
   position: relative;
+  margin: 0;
 }
 
 .center-big .owl-stage-outer .owl-item div .img-cont:before {
@@ -414,6 +465,26 @@ header.sticky .navbar {
           filter: blur(5px);
 }
 
+.center-big .owl-stage-outer .owl-item div .img-cont figcaption {
+  position: absolute;
+  font-size: 2rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 8rem 9rem 0 11rem;
+  display: none;
+}
+
 .center-big .owl-stage-outer .owl-item div .text-cont {
   display: none;
 }
@@ -431,6 +502,10 @@ header.sticky .navbar {
 .center-big .owl-stage-outer .owl-item.center > div .img-cont img {
   -webkit-filter: blur(0px);
           filter: blur(0px);
+}
+
+.center-big .owl-stage-outer .owl-item.center > div .img-cont figcaption {
+  display: block;
 }
 
 .center-big .owl-stage-outer .owl-item.center > div .text-cont {

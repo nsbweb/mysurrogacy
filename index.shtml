@@ -23,7 +23,7 @@
 <script src="resources/js/modernizr-2.6.2.min.js" ></script>
 
 <!-- Custom styles for this template -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+<link href="resources/css/plugin.css" rel="stylesheet">
 <link href="resources/css/all.min.css" rel="stylesheet">
 <link href="resources/css/style.css" rel="stylesheet">
 <link href="resources/css/media.css" rel="stylesheet">
@@ -34,7 +34,9 @@
 <header class="animated" data-animation="fadeInUp" data-animation-delay="300">
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="#">
+                <img src="../my-surrogacy/resources/images/logo.png" alt="logo">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -56,18 +58,52 @@
 
 <!-- Banner :: Start -->
 <div class="banner">
-    <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
-        <div class="container">
-            <div class="col-sm-4">
-                <h2>Willing to be Parent?</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
+    <div class="owl-cara-single owl-carousel">
+        <div class="">
+            <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                <div class="container">
+                    <div class="col-sm-4">
+                        <h2>Willing to be Parent?</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
             </div>
         </div>
-    </div>
-
-    <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
-        <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+        <div class="">
+            <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                <div class="container">
+                    <div class="col-sm-4">
+                        <h2>Willing to be Parent?</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+            </div>
+        </div>
+        <div class="">
+            <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                <div class="container">
+                    <div class="col-sm-4">
+                        <h2>Willing to be Parent?</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Banner :: End -->
@@ -110,7 +146,7 @@
                 <div class="highlight-box">
                     <h2 class="main-tl">Our Values</h2>
                 </div>
-                <div class="slider owl-cara owl-carousel center-big">
+                <div class="slider owl-cara owl-carousel center-big up-in">
                     <div class="">
                         <figure class="img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
                             <img src="resources/images/values-bg.png" alt="">
@@ -207,8 +243,8 @@
                 <div class="highlight-box">
                     <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="400">Our Stories</h2>
                 </div>
-                <div class="d-flex">
-                    <div class="img-cont owl-cara-single owl-carousel animated" data-item="1" data-animation="fadeInUp" data-animation-delay="400">
+                <div class="d-sm-flex">
+                    <div class="owl-cara-single owl-carousel animated" data-item="1" data-animation="fadeInUp" data-animation-delay="400">
                         <div class="slide">
                             <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                                 <img src="../my-surrogacy/resources/images/gallery-img-01.jpg" alt="">
@@ -326,6 +362,18 @@
                 <p class="animated" data-animation="fadeInUp" data-animation-delay="400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
             </div>
             <div class="slider theme-03 owl-cara owl-carousel">
+                <div class="slide animated" data-animation="fadeInUp" data-animation-delay="300">
+                    <div class="img-cont">
+                        <img src="resources/images/modern-familly-img-01.jpg" alt="The Morden Family Show"/>
+                    </div>
+                    <div class="text-cont">
+                        <h6 class="location-name">Manchester</h6>
+                        <h4>The Morden Family Show</h4>
+                        <h5>12-11-2020   1pm to 5pm</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
+                    </div>
+                </div>
+                
                 <div class="slide animated" data-animation="fadeInUp" data-animation-delay="400">
                     <div class="img-cont">
                         <img src="resources/images/modern-familly-img-01.jpg" alt="The Morden Family Show"/>
@@ -339,18 +387,6 @@
                 </div>
                 
                 <div class="slide animated" data-animation="fadeInUp" data-animation-delay="500">
-                    <div class="img-cont">
-                        <img src="resources/images/modern-familly-img-01.jpg" alt="The Morden Family Show"/>
-                    </div>
-                    <div class="text-cont">
-                        <h6 class="location-name">Manchester</h6>
-                        <h4>The Morden Family Show</h4>
-                        <h5>12-11-2020   1pm to 5pm</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
-                    </div>
-                </div>
-                
-                <div class="slide animated" data-animation="fadeInUp" data-animation-delay="600">
                     <div class="img-cont">
                         <img src="resources/images/modern-familly-img-01.jpg" alt="The Morden Family Show"/>
                     </div>
