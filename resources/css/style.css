@@ -63,8 +63,131 @@ p {
   font-size: 1rem;
 }
 
+p:last-child {
+  margin-bottom: 0;
+}
+
 svg {
   max-width: 100%;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.animated,
+.animated .animated .fa,
+.animated .fa,
+.clearfix:after,
+.row-style:after {
+  visibility: hidden;
+}
+
+.animated {
+  -webkit-animation-duration: .65s;
+  animation-duration: .65s;
+}
+
+.touch .animated,
+.touch .animated .animated .fa,
+.touch .animated .fa,
+.touch .clearfix:after,
+.touch .row-style:after {
+  visibility: visible;
+}
+
+@media (max-width: 991px) {
+  .animated,
+  .animated .animated,
+  .animated .animated .fa,
+  .animated .fa,
+  .clearfix:after,
+  .row-style:after {
+    visibility: visible;
+    -webkit-animation-name: animation-off;
+    animation-name: animation-off;
+  }
+}
+
+.vhidden {
+  visibility: hidden;
+}
+
+.visible,
+.visible .fa,
+.visible .visible .fa,
+.visible .animated .fa,
+.visible .clearfix:after,
+.visible .row-style:after {
+  visibility: visible;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-1.333em);
+            transform: translatey(-1.333em);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
+  50% {
+    -webkit-transform: translatey(-1.333em);
+            transform: translatey(-1.333em);
+  }
+  100% {
+    -webkit-transform: translatey(0px);
+            transform: translatey(0px);
+  }
 }
 
 /*COMMON CSS*/
@@ -134,10 +257,345 @@ header.sticky .navbar {
           animation: rainbow-text-simple-animation 0.5s ease-in forwards;
 }
 
+.banner .img-cont svg {
+  width: 100%;
+}
+
 /*Banner CSS */
 /*Main Content CSS*/
 .main-content {
   padding: 1.5rem 0;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section.shade-womb {
+  position: relative;
+}
+
+.section.shade-womb:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: url(../images/womb-shape.png) no-repeat center bottom;
+}
+
+.section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section .video-container {
+  position: relative;
+  z-index: 2;
+}
+
+.section .video-container:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: #000000;
+  opacity: 0.3;
+}
+
+.section .btn-loadmore {
+  background-image: -webkit-gradient(linear, left top, right top, from(#A84088), color-stop(18.6%, #A11552), color-stop(36.68%, #F53694), color-stop(54.22%, #FC6D68), color-stop(72.82%, #FEA94E), color-stop(88.23%, #BADCC8), color-stop(102.05%, #6AC6E6));
+  background-image: linear-gradient(90deg, #A84088 0%, #A11552 18.6%, #F53694 36.68%, #FC6D68 54.22%, #FEA94E 72.82%, #BADCC8 88.23%, #6AC6E6 102.05%);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  position: relative;
+}
+
+.section .btn-loadmore:after {
+  font-family: "Font Awesome 5 Free";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  content: "\f107";
+  color: #FFFFFF;
+  display: block;
+  margin: 0 auto;
+  color: #ABE9FF;
+}
+
+.highlight-box {
+  max-width: 880px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.highlight-box .main-tl {
+  margin-bottom: 1.5rem;
+}
+
+.highlight-box p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #807E7E;
+}
+
+.center-big .owl-stage-outer {
+  padding-top: 5rem;
+}
+
+.center-big .owl-stage-outer .owl-item div {
+  cursor: pointer;
+  margin: 6% 8%;
+  -webkit-transition: margin 0.4s ease;
+  transition: margin 0.4s ease;
+  opacity: 1;
+}
+
+.center-big .owl-stage-outer .owl-item div .img-cont {
+  position: relative;
+}
+
+.center-big .owl-stage-outer .owl-item div .img-cont:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-transform: rotate(290deg);
+          transform: rotate(290deg);
+  background: url(../images/womb-shape.png) no-repeat center bottom;
+  background-size: contain;
+  left: -12rem;
+  top: -7rem;
+  bottom: -3rem;
+  right: 1rem;
+  display: none;
+}
+
+.center-big .owl-stage-outer .owl-item div .img-cont:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: 100%;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  left: 1rem;
+  top: 1rem;
+  background: rgba(250, 79, 103, 0.2);
+  -webkit-filter: blur(204px);
+          filter: blur(204px);
+  overflow: hidden;
+}
+
+.center-big .owl-stage-outer .owl-item div .img-cont img {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.center-big .owl-stage-outer .owl-item div .text-cont {
+  display: none;
+}
+
+.center-big .owl-stage-outer .owl-item.center > div {
+  cursor: auto;
+  margin: 0;
+  opacity: 1;
+}
+
+.center-big .owl-stage-outer .owl-item.center > div .img-cont:before {
+  display: block;
+}
+
+.center-big .owl-stage-outer .owl-item.center > div .img-cont img {
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+}
+
+.center-big .owl-stage-outer .owl-item.center > div .text-cont {
+  display: block;
+}
+
+.center-big .owl-stage-outer .owl-item:not(.center) > div:hover {
+  opacity: 1;
+}
+
+.blog-list > div {
+  position: relative;
+}
+
+.blog-list > div .img-cont {
+  position: relative;
+  z-index: 1;
+  height: 25rem;
+  overflow: hidden;
+}
+
+.blog-list > div .img-cont img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.blog-list > div .img-cont:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: #000000;
+  opacity: 0.3;
+}
+
+.blog-list > div .text-cont {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 1.87rem;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.blog-list > div .text-cont .cont-in {
+  max-width: 20rem;
+}
+
+.blog-list > div .text-cont .cont-in h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.blog-list > div .text-cont .cont-in p {
+  font-size: 1rem;
+}
+
+.blog-list > div .text-cont .btn-arrow:before {
+  font-family: "Font Awesome 5 Free";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  content: '\f30bc';
+}
+
+.owl-carousel.theme-03 {
+  margin: 0 -1.25rem;
+}
+
+.owl-carousel.theme-03 .owl-item {
+  padding: 0 1.25rem;
+}
+
+.owl-carousel.theme-03 .owl-item .text-cont {
+  padding: 1.3rem 2.6rem;
+  background: #202020;
+  text-align: center;
+}
+
+.owl-carousel.theme-03 .owl-item .text-cont .location-name {
+  font-size: 0.875rem;
+  color: #999999;
+}
+
+.owl-carousel.theme-03 .owl-item .text-cont h4 {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+
+.owl-carousel.theme-03 .owl-item .text-cont h5 {
+  font-size: 1rem;
+  color: #999999;
+  margin-bottom: 1rem;
+}
+
+.owl-carousel.theme-03 .owl-item .text-cont p {
+  font-size: 1rem;
+  color: #939090;
+}
+
+.owl-carousel.theme-03 .owl-item .text-cont p:last-child {
+  margin-bottom: 0;
+}
+
+.join-txt {
+  width: 100%;
+  border: 2px solid;
+  background-image: -webkit-gradient(linear, left top, right top, from(#A84088), color-stop(18.6%, #A11552), color-stop(36.68%, #F53694), color-stop(54.22%, #FC6D68), color-stop(72.82%, #FEA94E), color-stop(88.23%, #BADCC8), color-stop(102.05%, #6AC6E6));
+  background-image: linear-gradient(90deg, #A84088 0%, #A11552 18.6%, #F53694 36.68%, #FC6D68 54.22%, #FEA94E 72.82%, #BADCC8 88.23%, #6AC6E6 102.05%);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 0.625rem;
+  padding: 1.75rem 3rem;
+}
+
+.join-txt .main-tl {
+  background-image: -webkit-gradient(linear, left top, right top, from(#A84088), color-stop(18.6%, #A11552), color-stop(36.68%, #F53694), color-stop(54.22%, #FC6D68), color-stop(72.82%, #FEA94E), color-stop(88.23%, #BADCC8), color-stop(102.05%, #6AC6E6));
+  background-image: linear-gradient(90deg, #A84088 0%, #A11552 18.6%, #F53694 36.68%, #FC6D68 54.22%, #FEA94E 72.82%, #BADCC8 88.23%, #6AC6E6 102.05%);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.join-txt .btn-link span {
+  background-image: -webkit-gradient(linear, left top, right top, from(#A84088), color-stop(18.6%, #A11552), color-stop(36.68%, #F53694), color-stop(54.22%, #FC6D68), color-stop(72.82%, #FEA94E), color-stop(88.23%, #BADCC8), color-stop(102.05%, #6AC6E6));
+  background-image: linear-gradient(90deg, #A84088 0%, #A11552 18.6%, #F53694 36.68%, #FC6D68 54.22%, #FEA94E 72.82%, #BADCC8 88.23%, #6AC6E6 102.05%);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*Main Content CSS*/

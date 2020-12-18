@@ -22,3 +22,25 @@
 @mixin gradientColorAnim {    
     animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
 }
+
+@mixin zIndexup {    
+    position: relative;
+    z-index: 2;
+}
+@mixin fullContent {    
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0; right: 0;
+    z-index: 1;  
+}
+
+@mixin fontAwesome {
+    font-family: $fontAwesomefree;
+    -moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:inline-block;font-style:normal;font-variant:normal;text-rendering:auto;line-height:1    
+}
+
+@mixin overlay {
+    @include fullContent;
+    background: $color00;
+    opacity: 0.3;    
+}
