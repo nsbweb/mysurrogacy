@@ -1,0 +1,172 @@
+@import "mixins";
+@import "variables";
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: $basefont;
+}
+body { 
+    font-size: 62.5%; 
+    font-family: $basfontfamily;
+    background-color: $color00;
+    color: $color02;
+}
+
+h1 { 
+    font-size: 5rem;
+    /* Create the gradient. */
+    @include gradientColor;
+
+    /* Animate the text when loading the element. */
+    /* This animates it on page load and when hovering out. */
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+    // &:hover{
+    //     animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+    // }
+    font-family: $basfontfamily;
+    font-weight: 700;
+}
+
+/*COMMON CSS*/
+p { color:$color02; font-size: 1rem; }
+svg { max-width: 100%; }
+/*COMMON CSS*/
+
+
+/*Header CSS*/
+header {
+    &.sticky .navbar {
+        background-color: $color01;
+        z-index: 2;
+    }
+}
+.navbar-nav  { 
+    & .nav-item {
+        & .nav-link { 
+            color: $color03;
+            font-size: 1.12rem;
+            font-weight: 400;
+        }
+        &.active .nav-link { 
+            color: $color02;
+            font-weight: 700;
+        }
+        & + .nav-item { margin-left:2rem;  }
+    }
+ }
+/*Header CSS*/
+
+
+/*Banner CSS */
+.banner { padding:3.5rem 0 0 0; 
+    .text-cont{ 
+        position: absolute;
+        left: 0; 
+        right: 0 ; 
+        top: 0; 
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        & p {
+            color:$color08;
+        }
+        & .btn-link {
+            @include gradientColor;
+            @include gradientColorAnim;
+            font-weight: 700;            
+            padding: 0;
+            &:hover{
+                animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+            }
+        }
+    }
+}
+
+/*Banner CSS */
+
+
+/*Main Content CSS*/
+.main-content { padding:1.5rem 0; }
+/*Main Content CSS*/
+
+
+/* Footer CSS */
+footer { 
+    background-color: $color01; 
+    padding: 4rem 0 0; 
+    font-size: 1rem; 
+    color: $color06;
+    ul {
+        display: inline-block;
+        list-style: none;
+        li {
+            display: block;
+            & a { 
+                display: inline-block;
+                text-decoration: none;
+                color: $color06;
+                &:hover{ 
+                    color: $color02;
+                }
+            }
+        }
+    }
+    .footer-bt {
+        border-top: 1px solid $color07;
+        text-align: center;
+        padding: 2rem 0;
+        & p {
+            margin-bottom: 0;
+            font-size: 1rem;
+            & a {
+                display: inline-block;
+                text-decoration: none;
+                color: $color02;
+            }
+        }
+    }
+}
+/* Footer CSS */
+
+
+@media (min-width: 768px) {
+
+}
+
+
+
+/* Move the background and make it smaller. */
+/* Animation shown when entering the page and after the hover animation. */
+@keyframes rainbow-text-simple-animation-rev {
+0% {
+    background-size: 650%;
+}
+40% {
+    background-size: 650%;
+}
+100% {
+    background-size: 100%;
+}
+}
+
+/* Move the background and make it larger. */
+/* Animation shown when hovering over the text. */
+@keyframes rainbow-text-simple-animation {
+0% {
+    background-size: 100%;
+}
+80% {
+    background-size: 650%;
+}
+100% {
+    background-size: 650%;
+}
+}
