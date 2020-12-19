@@ -37,7 +37,18 @@ $color08: #999999;
 $color09: #202020;
 $color10: #939090;
 
+$gradiantColor00: linear-gradient(
+    90deg,
+    #A84088 0%, 
+    #A11552 18.6%, 
+    #F53694 36.68%,
+    #FC6D68 54.22%, 
+    #FEA94E 72.82%, 
+    #BADCC8 88.23%, 
+    #6AC6E6 102.05%);
 
+//Width
+$w6rem:6rem;
 
 //fonts
 $basfontfamily : 'Effra';

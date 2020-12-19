@@ -309,7 +309,7 @@
     <!-- Join Us to ease your surrogacy :: End -->
 
     <!-- Blog :: Start -->
-    <div class="section">
+    <div class="section shade-bg">
         <div class="container">
             <div class="highlight-box">
                 <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Blog</h2>
@@ -382,7 +382,7 @@
     <!-- Blog :: End -->
     
     <!-- Press Releases :: Start -->
-    <div class="section">
+    <div class="section shade-bg">
         <div class="container">
             <div class="highlight-box">
                 <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Press Releases</h2>

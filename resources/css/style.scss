@@ -163,9 +163,11 @@ header {
         }
         & .btn-link {
             @include gradientColor;
-            @include gradientColorAnim;
-            font-weight: 700;            
+            @include gradientColorAnim; 
+            font-weight: 700;
             padding: 0;
+            font-size: 1.25rem;
+            @include btnArrow;
             &:hover{
                 animation: rainbow-text-simple-animation 0.5s ease-in forwards;
             }
@@ -360,6 +362,7 @@ header {
             display: flex;
             align-items: center;
             width:100%;
+            justify-content: space-between;
             & .cont-in { 
                 max-width:20rem;
                 & h3 {
@@ -371,20 +374,13 @@ header {
                 }
             }
             & .btn-arrow {  
-                &:before {                  
-                    @include fontAwesome;
-                    content: '\f30bc';
-                }
+                text-decoration: none;
+                @include btnArrow;
             }
         }
     }
 }
 
-.Our-Stories {     
-    & .owl-controls {
-        max-width: 50%;;
-    }
- }
 
 .owl-carousel{
     & .owl-controls {
@@ -394,20 +390,27 @@ header {
                 width:2rem;
                 height:2rem;
                 top: calc(50% - 1rem);
+                background: none;
+                margin: 0;
+                padding:0;
                 &:before {
-                    @include fontAwesome;
                     content: '';
+                    width: 100%;
+                    height: 100%;
+                    display: block;
                 }
                 &.owl-prev {
-                    left: 0;
+                    left: -2rem;
                     &:before {
-                        content: '\f104';
+                        content: '';
+                        background: url(../images/angle-left-slim.svg) no-repeat center;
                     }
                 }
                 &.owl-next {
-                    right: 0;
+                    right: -2rem;
                     &:before {
-                        content: '\f105';
+                        content: '';
+                        background: url(../images/angle-right-slim.svg) no-repeat center;
                     }
                 }
                 
@@ -415,6 +418,7 @@ header {
         }
     }
     &.theme-02{
+        margin:0 -0.625rem;
         .owl-item {
             padding:0 0.625rem;
             & .img-cont {
@@ -433,6 +437,7 @@ header {
     }
     &.theme-03 {
         margin:0 -1.25rem;
+        width: auto;
         .owl-item {
             padding:0 1.25rem;
             & .img-cont {
@@ -457,12 +462,48 @@ header {
     }
  }
 
+ 
+.Our-Stories {
+    & .owl-carousel{
+        & .owl-controls {
+            max-width: 50%;;
+            & .owl-nav {
+                & [class*=owl-] {
+                    border:1px solid $color02;
+                    border-radius: 100%;
+                    width:2.5rem;
+                    height:2.5rem;
+                    &:before {
+                        background-size:25% ;
+                    }          
+                    &.owl-prev {
+                        left: -0rem;
+                    }
+                    &.owl-next {
+                        right: calc(50% + 15px);
+                    }
+                }      
+            }
+        }
+    }     
+ }
+
  .join-txt { 
     width:100%;
-    border: 2px solid; 
-    @include gradientColor;
     border-radius: 0.625rem;
     padding: 1.75rem 3rem;
+    background: $color00;
+    position: relative;
+    &:before { 
+        @include fullContent;      
+        background: $gradiantColor00;
+        left: -2px;
+        top: -2px;
+        width:calc(100% + 4px);
+        height:calc(100% + 4px);
+        z-index: -1;
+        border-radius: 0.625rem;
+    }
     & .main-tl {
         @include gradientColor;
         margin: 0;
@@ -470,8 +511,12 @@ header {
         font-weight: 700;
     }
     & .btn-link {
+        text-decoration: none;
+        font-size: 1.5rem; 
+        @include btnArrow;
        & span {
             @include gradientColor;
+            
         }
     }
  }

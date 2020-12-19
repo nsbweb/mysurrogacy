@@ -1,13 +1,5 @@
 @mixin gradientColor {
-    background-image: linear-gradient(
-    90deg,
-    #A84088 0%, 
-    #A11552 18.6%, 
-    #F53694 36.68%,
-    #FC6D68 54.22%, 
-    #FEA94E 72.82%, 
-    #BADCC8 88.23%, 
-    #6AC6E6 102.05%);
+    background-image: $gradiantColor00;
 
     /* Set the background size and repeat properties. */
     background-size: 100%;
@@ -43,4 +35,20 @@
     @include fullContent;
     background: $color00;
     opacity: 0.3;    
+}
+
+@mixin btnArrow {
+        padding-right:$w6rem + 1rem;
+        display: inline-block;
+        position: relative;
+        &:after { 
+            content: '';
+            position: absolute;
+            background: url(../images/long-arrow.svg) no-repeat left top;
+            background-size:contain ;
+            right: 0;
+            top:calc(50% - 0.4rem);
+            width:$w6rem;
+            height:0.8rem;
+         }    
 }
