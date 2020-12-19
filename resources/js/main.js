@@ -328,30 +328,36 @@ $owl.owlCarousel({
     center: true,
     loop: true,
     responsiveClass:true,
+    nav:true,
+    navText:[,],
+    dots:false,
     responsive:{
         0:{
-            items:1,
-            nav:true
+            items:1
         },
         600:{
-            items:3,
-            nav:false
+            items:3
         },
         1000:{
-            items:3,
-            nav:true,
-            loop:false
+            items:3
         }
     }
 });
 
-$(document).on('click', '.owl-item>div', function() {
-    // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel
-    var $speed = 300;  // in ms
-    $owl.trigger('to.owl.carousel', [$(this).data( 'position' ), $speed] );
-});
+// $(document).on('click', '.owl-item>div', function() {
+//     // see https://owlcarousel2.github.io/OwlCarousel2/docs/api-events.html#to-owl-carousel
+//     var $speed = 300;  // in ms
+//     $owl.trigger('to.owl.carousel', [$(this).data( 'position' ), $speed] );
+// });
 
 var $owlSingle = $('.owl-cara-single');
 $owlSingle.owlCarousel({
-    singleItem:true
+    items:1,
+    loop:true,
+    nav: true,
+    navText:[,],
+    margin:0,
+    autoplay:false,
+    autoplayTimeout:6000,
+    autoplayHoverPause:true
 });

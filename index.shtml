@@ -104,6 +104,21 @@
                 <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
             </div>
         </div>
+        <div class="">
+            <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                <div class="container">
+                    <div class="col-sm-4">
+                        <h2>Willing to be Parent?</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+            </div>
+        </div>
     </div>
 </div>
 <!-- Banner :: End -->
@@ -112,7 +127,7 @@
 <div class="main-content">
 
     <!-- Who We are :: Start -->
-        <div class="section shade-womb animated" data-animation="fadeInUp" data-animation-delay="600">
+        <div class="section shade-womb shade-bg animated" data-animation="fadeInUp" data-animation-delay="600">
             <div class="container">
                 <div class="highlight-box">
                     <h2 class="main-tl">Who we are</h2>
@@ -141,7 +156,7 @@
     <!-- Our Misson :: End -->
 
     <!-- Our Misson :: Start -->
-        <div class="section  animated" data-animation="fadeInUp" data-animation-delay="300">
+        <div class="section animated" data-animation="fadeInUp" data-animation-delay="300">
             <div class="container">                
                 <div class="highlight-box">
                     <h2 class="main-tl">Our Values</h2>
@@ -198,13 +213,13 @@
     <!-- Our Misson :: End -->
 
     <!-- Our Team :: Start -->
-        <div class="section">
+        <div class="section shade-womb shade-bg">
             <div class="container">
                 <div class="highlight-box">
                     <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Our Team</h2>
                     <p class=" animated" data-animation="fadeInUp" data-animation-delay="400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
                 </div>
-                <div class="slider animated owl-cara owl-carousel" data-animation="fadeInUp" data-animation-delay="400">
+                <div class="slider animated owl-cara owl-carousel theme-02" data-animation="fadeInUp" data-animation-delay="400">
                     <div class="slide">
                         <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                             <img src="../my-surrogacy/resources/images/team-img-01.jpg" alt="">
@@ -238,32 +253,44 @@
     <!-- Our Team :: End -->
 
     <!-- Our Stories :: Start -->
-        <div class="section">
+        <div class="section shade-bg Our-Stories">
             <div class="container">
                 <div class="highlight-box">
-                    <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="400">Our Stories</h2>
+                    <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Our Stories</h2>
                 </div>
-                <div class="d-sm-flex">
-                    <div class="owl-cara-single owl-carousel animated" data-item="1" data-animation="fadeInUp" data-animation-delay="400">
-                        <div class="slide">
-                            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                <div class="owl-cara-single owl-carousel animated" data-animation="fadeInUp" data-animation-delay="300">
+                    <div class="slide">                            
+                        <div class="row">
+                            <div class="col-sm-6 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
                                 <img src="../my-surrogacy/resources/images/gallery-img-01.jpg" alt="">
                             </div>
-                        </div>
-                        <div class="slide">
-                            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
-                                <img src="../my-surrogacy/resources/images/gallery-img-01.jpg" alt="">
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
-                                <img src="../my-surrogacy/resources/images/gallery-img-01.jpg" alt="">
+                            <div class="col-sm-6 text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Wes Johnson-Ellis</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p>
                             </div>
                         </div>
                     </div>
-                    <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
-                        <h4>Wes Johnson-Ellis</h4>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p>
+                    <div class="slide">             
+                        <div class="row">
+                            <div class="col-sm-6 img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                                <img src="../my-surrogacy/resources/images/gallery-img-01.jpg" alt="">
+                            </div>
+                            <div class="col-sm-6 text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Wes Johnson-Ellis</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="row">
+                            <div class="col-sm-6 img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                                <img src="../my-surrogacy/resources/images/gallery-img-01.jpg" alt="">
+                            </div>
+                            <div class="col-sm-6 text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Wes Johnson-Ellis</h4>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -409,7 +436,7 @@
 <footer>
     <div class="container">
     <div class="row">
-        <div class="col animated" data-animation="fadeInUp" data-animation-delay="300">
+        <div class="col-sm-4 animated" data-animation="fadeInUp" data-animation-delay="300">
             <a href="#">
                 <svg width="246" height="149" viewBox="0 0 246 149" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M242.741 99.3491C239.096 90.9581 233.11 87.4051 228.733 85.9012C226.472 85.1224 220.433 83.2145 215.76 81.7495L212.7 80.7955C212.573 80.7517 212.441 80.703 212.299 80.6592C211.775 80.4938 211.119 80.1969 210.972 79.7296C210.84 79.3013 211.09 78.6053 211.666 77.8217C212.323 77.1257 213.186 76.2934 214.244 75.3346C214.56 75.0474 214.858 74.77 215.089 74.5364C221.732 68.798 225.712 63.7995 227.61 58.8107C229.201 54.6249 229.366 50.5025 228.152 45.0221C227.624 42.642 226.354 40.1647 225.003 37.5413C222.624 32.9175 220.164 28.138 221.675 23.5726C224.555 14.8702 218.049 9.67694 214.806 7.70575C213.777 5.13103 211.685 3.05763 208.876 1.84571C205.401 0.346635 201.067 0.181153 195.997 1.36387C189.501 2.88241 184.94 6.5571 182.433 12.2955C178.335 21.6744 181.097 33.9493 183.491 38.4417C183.793 39.0112 184.392 39.3178 185.02 39.2205C185.643 39.1231 186.13 38.6461 186.257 38.0085C186.923 34.6502 189.288 26.6486 196.842 24.9013C210.51 21.7377 213.592 19.7908 214.867 16.1016C215.16 18.1798 215.198 20.6475 214.655 23.3682C213.72 28.0504 214.556 30.7808 215.051 32.4113C215.16 32.7618 215.287 33.1852 215.306 33.3799C215.075 33.5016 214.504 33.4383 214.074 33.3848C213.182 33.2825 212.068 33.1511 211.336 34.037C211.114 34.3046 210.765 35.0737 209.622 37.7895C209.405 38.3006 209.164 38.8846 209.112 38.982C209.051 39.1036 208.985 39.2448 208.909 39.4005C208.574 40.1209 208.012 41.3231 207.271 41.4399C206.147 41.6199 204.858 40.8266 203.499 39.9846C201.785 38.9236 199.845 37.7262 197.748 38.3444C194.958 39.1718 192.683 42.9876 193.953 48.4388C194.854 52.2984 199.339 55.3015 203.678 58.2071C207.465 60.7429 211.383 63.3663 212.096 66.1308C212.318 66.9972 212.384 67.9317 212.299 68.91C212.072 70.2144 211.265 72.9254 208.385 76.6439C208.055 77.0576 207.677 77.5005 207.285 77.9239L207.233 77.9774C205.524 79.8318 203.758 81.7543 204.245 83.414C204.476 84.1977 205.132 84.7184 206.204 84.9715C206.53 85.0494 206.988 85.0932 207.62 85.1516C210.873 85.4534 218.488 86.164 223.455 93.5377C228.549 101.641 228.634 116.871 200.114 143.426L198.438 144.983H217.719C221.444 139.415 224.366 134.368 226.623 129.803H233.322C231.047 137.347 228.327 143.333 227.553 144.983H241.881L242.051 144.317C247.037 124.906 247.273 109.774 242.741 99.3491ZM225.815 89.3373C232.269 92.3452 235.305 97.9084 236.311 104.391H233.421C232.921 92.9536 225.815 89.3373 225.815 89.3373ZM234.72 124.668H228.974C231.807 117.932 233.081 112.383 233.383 107.847H236.665C236.938 113.318 236.051 119.207 234.72 124.668Z" fill="url(#paint0_linear)"/>
@@ -635,23 +662,23 @@
                 <li><a href="#">Community</a></li>
             </ul>
         </div>
-        <div class="col">
+        <div class="col-sm-4">
             <div class="newsletter-sec animated" data-animation="fadeInUp" data-animation-delay="300">
                 <h4 class="animated" data-animation="fadeInUp" data-animation-delay="300">Get our newsletter</h4>
-                <form class="form-inline animated" data-animation="fadeInUp" data-animation-delay="300">
+                <form class="form-inline d-flex animated" data-animation="fadeInUp" data-animation-delay="300">
                     <input type="text" class="form-control" placeholder="Your Email" value=""/>
-                    <button class="btn btn-black" type="submit">Suscribe</button>
+                    <button type="submit" class="btn btn-black" >Suscribe</button>
                 </form>
-                <ul class="animated" data-animation="fadeInUp" data-animation-delay="300">
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-snapchat"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <ul class="animated social-list" data-animation="fadeInUp" data-animation-delay="300">
+                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-snapchat-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
                 </ul>
-                <ul class="animated" data-animation="fadeInUp" data-animation-delay="300">
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
+                <ul class="animated app-list" data-animation="fadeInUp" data-animation-delay="300">
+                    <li><a href="#"><img src="../my-surrogacy/resources/images/app-store.png" alt="App Store"></a></li>
+                    <li><a href="#"><img src="../my-surrogacy/resources/images/play-store.png" alt="Google Play Store"></a></li>
                 </ul>
             </div>
         </div>

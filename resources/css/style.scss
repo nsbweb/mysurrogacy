@@ -99,6 +99,11 @@ img, svg  { max-width: 100%; }
     50% { transform: translatey(-1.333em); } 
     100% { transform: translatey(0px); }
 }
+
+.btn-black { 
+    background: $color00;
+    color: $color02;
+ }
 /*COMMON CSS*/
 
 
@@ -152,6 +157,7 @@ header {
         bottom: 0;
         display: flex;
         align-items: center;
+        z-index: 2;
         & p {
             color:$color08;
         }
@@ -168,6 +174,7 @@ header {
     & .img-cont {
         & svg { width:100%; }
     }
+    & .owl-nav { display: none; }
 }
 /*Banner CSS */
 
@@ -180,6 +187,9 @@ header {
 }
 
 .section { padding: 5rem 0;
+    &.shade-bg {
+        background: url(../images/shade-circle.png) no-repeat center -8rem;
+    }
     &.shade-womb { 
         position: relative;
         &:before { 
@@ -309,7 +319,7 @@ header {
                         filter: blur(0px);
                     }                    
                     & figcaption {
-                        display: block;
+                        display: flex;
                     }
                 }
                 & .text-cont {
@@ -370,7 +380,57 @@ header {
     }
 }
 
+.Our-Stories {     
+    & .owl-controls {
+        max-width: 50%;;
+    }
+ }
+
 .owl-carousel{
+    & .owl-controls {
+        & .owl-nav {
+            & [class*=owl-] {
+                position: absolute;
+                width:2rem;
+                height:2rem;
+                top: calc(50% - 1rem);
+                &:before {
+                    @include fontAwesome;
+                    content: '';
+                }
+                &.owl-prev {
+                    left: 0;
+                    &:before {
+                        content: '\f104';
+                    }
+                }
+                &.owl-next {
+                    right: 0;
+                    &:before {
+                        content: '\f105';
+                    }
+                }
+                
+            }
+        }
+    }
+    &.theme-02{
+        .owl-item {
+            padding:0 0.625rem;
+            & .img-cont {
+                
+            }
+            & .text-cont{
+                padding: 1.3rem 2rem;
+                text-align: center;
+                & h3 { font-size: 1.5rem; color: $color02; font-weight: 700; margin-bottom:1.5rem}
+                & p {
+                    font-size: 1rem;
+                    color: $color03;
+                }
+            }
+        }
+    }
     &.theme-03 {
         margin:0 -1.25rem;
         .owl-item {
@@ -427,6 +487,8 @@ footer {
     ul {
         display: inline-block;
         list-style: none;
+        padding: 0;
+        margin:0;
         li {
             display: block;
             & a { 
@@ -438,11 +500,47 @@ footer {
                 }
             }
         }
+        li + li {
+            margin-top:1.4rem;
+        }
+        &.social-list { 
+            display: block;
+            padding:1rem 0 2rem;
+            li { 
+                display: inline-block; font-size: 2rem;
+                & a { 
+                    color: $color02;
+                    width: 2rem;
+                    height: 2rem;
+                    text-align: center;
+                    line-height: 2rem;
+                    &:hover .fa-facebook-square { color: #4267B2; }
+                    &:hover .fa-instagram-square { color: #8a3ab9; }
+                    &:hover .fa-snapchat-square { color: #FFFC00; }
+                    &:hover .fa-twitter-square { color: #1DA1F2; }
+                    &:hover .fa-youtube-square { color: #FF0000; }
+                }
+             }
+             li + li { 
+                margin-top:0rem;
+                margin-left: 1.125rem;
+              }
+         }
+         &.app-list { 
+             display: block;
+             li { 
+                 display: inline-block;
+              }
+              li + li { 
+                 margin-top:0rem;
+               }
+          }
     }
     .footer-bt {
         border-top: 1px solid $color07;
         text-align: center;
         padding: 2rem 0;
+        margin-top: 1.875rem;
         & p {
             margin-bottom: 0;
             font-size: 1rem;
@@ -452,6 +550,10 @@ footer {
                 color: $color02;
             }
         }
+    }
+    .form-inline { 
+        & .form-control { border-radius: 0; }
+        & .btn  { border-radius: 0; }
     }
 }
 /* Footer CSS */
