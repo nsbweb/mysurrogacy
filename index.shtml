@@ -35,7 +35,7 @@
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="../my-surrogacy/resources/images/logo.png" alt="logo">
+                <img src="resources/images/logo.png" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -222,7 +222,7 @@
                 <div class="slider animated owl-cara owl-carousel theme-02" data-animation="fadeInUp" data-animation-delay="400">
                     <div class="slide">
                         <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
-                            <img src="../my-surrogacy/resources/images/team-img-01.jpg" alt="">
+                            <img src="resources/images/team-img-01.jpg" alt="">
                         </div>
                         <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
                             <h3>Mike Johnson- Ellis</h3>
@@ -231,7 +231,7 @@
                     </div>
                     <div class="slide">
                         <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
-                            <img src="../my-surrogacy/resources/images/team-img-01.jpg" alt="">
+                            <img src="resources/images/team-img-01.jpg" alt="">
                         </div>
                         <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
                             <h3>Mike Johnson- Ellis</h3>
@@ -240,7 +240,7 @@
                     </div>
                     <div class="slide">
                         <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
-                            <img src="../my-surrogacy/resources/images/team-img-01.jpg" alt="">
+                            <img src="resources/images/team-img-01.jpg" alt="">
                         </div>
                         <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
                             <h3>Mike Johnson- Ellis</h3>
@@ -262,7 +262,7 @@
                     <div class="slide">                            
                         <div class="row">
                             <div class="col-sm-6 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
-                                <img src="../my-surrogacy/resources/images/gallery-img-01.jpg" alt="">
+                                <img src="resources/images/gallery-img-01.jpg" alt="">
                             </div>
                             <div class="col-sm-6 text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                                 <h4>Wes Johnson-Ellis</h4>
@@ -273,7 +273,7 @@
                     <div class="slide">             
                         <div class="row">
                             <div class="col-sm-6 img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
-                                <img src="../my-surrogacy/resources/images/gallery-img-01.jpg" alt="">
+                                <img src="resources/images/gallery-img-01.jpg" alt="">
                             </div>
                             <div class="col-sm-6 text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                                 <h4>Wes Johnson-Ellis</h4>
@@ -284,7 +284,7 @@
                     <div class="slide">
                         <div class="row">
                             <div class="col-sm-6 img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
-                                <img src="../my-surrogacy/resources/images/gallery-img-01.jpg" alt="">
+                                <img src="resources/images/gallery-img-01.jpg" alt="">
                             </div>
                             <div class="col-sm-6 text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                                 <h4>Wes Johnson-Ellis</h4>
@@ -318,7 +318,7 @@
             <div class="row blog-list no-gutters">
                 <div class="col-sm-4 animated" data-animation="fadeInUp" data-animation-delay="400">
                     <div class="img-cont">
-                        <img src="../my-surrogacy/resources/images/blog-img-01.jpg" alt="">
+                        <img src="resources/images/blog-img-01.jpg" alt="">
                     </div>
                     <div class="text-cont">
                         <div class="cont-in">
@@ -330,7 +330,7 @@
                 </div>
                 <div class="col-sm-4 animated" data-animation="fadeInUp" data-animation-delay="500">
                     <div class="img-cont">
-                        <img src="../my-surrogacy/resources/images/blog-img-02.jpg" alt="">
+                        <img src="resources/images/blog-img-02.jpg" alt="">
                     </div>
                     <div class="text-cont">
                         <div class="cont-in">
@@ -342,7 +342,7 @@
                 </div>
                 <div class="col-sm-4 animated" data-animation="fadeInUp" data-animation-delay="600">
                     <div class="img-cont">
-                        <img src="../my-surrogacy/resources/images/blog-img-03.jpg" alt="">
+                        <img src="resources/images/blog-img-03.jpg" alt="">
                     </div>
                     <div class="text-cont">
                         <div class="cont-in">
@@ -354,7 +354,7 @@
                 </div>
                 <div class="col-sm-4 animated" data-animation="fadeInUp" data-animation-delay="700">
                     <div class="img-cont">
-                        <img src="../my-surrogacy/resources/images/blog-img-04.jpg" alt="">
+                        <img src="resources/images/blog-img-04.jpg" alt="">
                     </div>
                     <div class="text-cont">
                         <div class="cont-in">
@@ -366,7 +366,7 @@
                 </div>
                 <div class="col-sm-8 animated" data-animation="fadeInUp" data-animation-delay="800">
                     <div class="img-cont">
-                        <img src="../my-surrogacy/resources/images/blog-img-05.jpg" alt="">
+                        <img src="resources/images/blog-img-05.jpg" alt="">
                     </div>
                     <div class="text-cont">
                         <div class="cont-in">
@@ -677,8 +677,8 @@
                     <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
                 </ul>
                 <ul class="animated app-list" data-animation="fadeInUp" data-animation-delay="300">
-                    <li><a href="#"><img src="../my-surrogacy/resources/images/app-store.png" alt="App Store"></a></li>
-                    <li><a href="#"><img src="../my-surrogacy/resources/images/play-store.png" alt="Google Play Store"></a></li>
+                    <li><a href="#"><img src="resources/images/app-store.png" alt="App Store"></a></li>
+                    <li><a href="#"><img src="resources/images/play-store.png" alt="Google Play Store"></a></li>
                 </ul>
             </div>
         </div>
