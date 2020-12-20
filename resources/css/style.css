@@ -826,6 +826,16 @@ header.sticky .navbar {
   -webkit-text-fill-color: transparent;
 }
 
+.join-txt .UC-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.join-txt .UC-list li {
+  display: inline-block;
+}
+
 /*Main Content CSS*/
 /* Footer CSS */
 footer {

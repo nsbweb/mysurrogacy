@@ -146,16 +146,16 @@
             <div class="container">
                 <div class="highlight-box">
                     <h2 class="main-tl">Useful Contacts</h2>
-                    <ul>
-                        <li><a href="#"><img src="resources/images/uc-image-01.svg" alt=""></a></li>
-                        <li><a href="#"><img src="resources/images/uc-image-01.svg" alt=""></a></li>
-                        <li><a href="#"><img src="resources/images/uc-image-01.svg" alt=""></a></li>
-                        <li><a href="#"><img src="resources/images/uc-image-01.svg" alt=""></a></li>
+                    <ul class="UC-list">
+                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
 
-                        <li><a href="#"><img src="resources/images/uc-image-01.svg" alt=""></a></li>
-                        <li><a href="#"><img src="resources/images/uc-image-01.svg" alt=""></a></li>
-                        <li><a href="#"><img src="resources/images/uc-image-01.svg" alt=""></a></li>
-                        <li><a href="#"><img src="resources/images/uc-image-01.svg" alt=""></a></li>
+                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
                     </ul>
                 </div>
                 <div class="text-center">
@@ -175,7 +175,7 @@
         </div>
     <!-- Our Misson :: End -->
 
-    <!-- Our Team :: Start -->
+    <!-- Our Next Steps :: Start -->
         <div class="section shade-womb shade-bg">
             <div class="container">
                 <div class="highlight-box">
@@ -201,184 +201,19 @@
                 </ul>
             </div>
         </div>
-    <!-- Our Team :: End -->
-
-    <!-- Our Stories :: Start -->
-        <div class="section shade-bg Our-Stories">
-            <div class="container">
-                <div class="highlight-box">
-                    <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Our Stories</h2>
-                </div>
-                <div class="owl-cara-single owl-carousel animated" data-animation="fadeInUp" data-animation-delay="300">
-                    <div class="slide">                            
-                        <div class="row">
-                            <div class="col-sm-6 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
-                                <img src="resources/images/gallery-img-01.jpg" alt="">
-                            </div>
-                            <div class="col-sm-6 text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
-                                <h4>Wes Johnson-Ellis</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">             
-                        <div class="row">
-                            <div class="col-sm-6 img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
-                                <img src="resources/images/gallery-img-01.jpg" alt="">
-                            </div>
-                            <div class="col-sm-6 text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
-                                <h4>Wes Johnson-Ellis</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide">
-                        <div class="row">
-                            <div class="col-sm-6 img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
-                                <img src="resources/images/gallery-img-01.jpg" alt="">
-                            </div>
-                            <div class="col-sm-6 text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
-                                <h4>Wes Johnson-Ellis</h4>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- Our Stories :: End -->
-
-    <!-- Join Us to ease your surrogacy :: Start -->
-        <div class="section">
-            <div class="container d-sm-flex animated" data-animation="fadeInUp" data-animation-delay="300">
-                <div class="join-txt d-sm-flex justify-content-between align-item-center">
-                    <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Join Us to ease your surrogacy</h2>
-                    <a href="#" class="btn btn-link animated" data-animation="fadeInUp" data-animation-delay="400"><span>Register Now</span></a>
-                </div>
-            </div>
-        </div>
-    <!-- Join Us to ease your surrogacy :: End -->
-
-    <!-- Blog :: Start -->
-    <div class="section shade-bg">
-        <div class="container">
-            <div class="highlight-box">
-                <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Blog</h2>
-                <p class="animated" data-animation="fadeInUp" data-animation-delay="400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
-            </div>
-            <div class="row blog-list no-gutters">
-                <div class="col-sm-4 animated" data-animation="fadeInUp" data-animation-delay="400">
-                    <div class="img-cont">
-                        <img src="resources/images/blog-img-01.jpg" alt="">
-                    </div>
-                    <div class="text-cont">
-                        <div class="cont-in">
-                            <h3>Web Design</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <a href="#" class="btn btn-arrow"></a>
-                    </div>
-                </div>
-                <div class="col-sm-4 animated" data-animation="fadeInUp" data-animation-delay="500">
-                    <div class="img-cont">
-                        <img src="resources/images/blog-img-02.jpg" alt="">
-                    </div>
-                    <div class="text-cont">
-                        <div class="cont-in">
-                            <h3>Web Design</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <a href="#" class="btn btn-arrow"></a>
-                    </div>
-                </div>
-                <div class="col-sm-4 animated" data-animation="fadeInUp" data-animation-delay="600">
-                    <div class="img-cont">
-                        <img src="resources/images/blog-img-03.jpg" alt="">
-                    </div>
-                    <div class="text-cont">
-                        <div class="cont-in">
-                            <h3>Web Design</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <a href="#" class="btn btn-arrow"></a>
-                    </div>
-                </div>
-                <div class="col-sm-4 animated" data-animation="fadeInUp" data-animation-delay="700">
-                    <div class="img-cont">
-                        <img src="resources/images/blog-img-04.jpg" alt="">
-                    </div>
-                    <div class="text-cont">
-                        <div class="cont-in">
-                            <h3>Web Design</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <a href="#" class="btn btn-arrow"></a>
-                    </div>
-                </div>
-                <div class="col-sm-8 animated" data-animation="fadeInUp" data-animation-delay="800">
-                    <div class="img-cont">
-                        <img src="resources/images/blog-img-05.jpg" alt="">
-                    </div>
-                    <div class="text-cont">
-                        <div class="cont-in">
-                            <h3>Web Design</h3>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        </div>
-                        <a href="#" class="btn btn-arrow"></a>
-                    </div>
-                </div>                    
-            </div>
-        </div>
-    </div>
-    <!-- Blog :: End -->
+    <!-- Our Next Steps :: End -->
     
-    <!-- Press Releases :: Start -->
-    <div class="section shade-bg">
+    <!-- Book an appointment with us :: Start -->
+    <div class="section bg-color12">
         <div class="container">
             <div class="highlight-box">
-                <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Press Releases</h2>
-                <p class="animated" data-animation="fadeInUp" data-animation-delay="400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
-            </div>
-            <div class="slider theme-03 owl-cara owl-carousel">
-                <div class="slide animated" data-animation="fadeInUp" data-animation-delay="300">
-                    <div class="img-cont">
-                        <img src="resources/images/modern-familly-img-01.jpg" alt="The Morden Family Show"/>
-                    </div>
-                    <div class="text-cont">
-                        <h6 class="location-name">Manchester</h6>
-                        <h4>The Morden Family Show</h4>
-                        <h5>12-11-2020   1pm to 5pm</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
-                    </div>
-                </div>
-                
-                <div class="slide animated" data-animation="fadeInUp" data-animation-delay="400">
-                    <div class="img-cont">
-                        <img src="resources/images/modern-familly-img-01.jpg" alt="The Morden Family Show"/>
-                    </div>
-                    <div class="text-cont">
-                        <h6 class="location-name">Manchester</h6>
-                        <h4>The Morden Family Show</h4>
-                        <h5>12-11-2020   1pm to 5pm</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
-                    </div>
-                </div>
-                
-                <div class="slide animated" data-animation="fadeInUp" data-animation-delay="500">
-                    <div class="img-cont">
-                        <img src="resources/images/modern-familly-img-01.jpg" alt="The Morden Family Show"/>
-                    </div>
-                    <div class="text-cont">
-                        <h6 class="location-name">Manchester</h6>
-                        <h4>The Morden Family Show</h4>
-                        <h5>12-11-2020   1pm to 5pm</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
-                    </div>
-                </div>
+                <h3>Still Have a Question?</h3>
+                <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Book an appointment with us</h2>
+                <p class="animated" data-animation="fadeInUp" data-animation-delay="400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
             </div>
         </div>
     </div>
-    <!-- Press Releases :: End -->
+    <!-- Book an appointment with us :: End -->
     
 </div>
 <!-- Main-Content :: End -->
