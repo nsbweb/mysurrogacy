@@ -1592,9 +1592,14 @@ footer .form-inline .btn {
   footer {
     text-align: center;
   }
+  .banner {
+    padding-top: 5rem;
+  }
+  .banner .text-cont,
   .banner.v2 .text-cont {
-    padding-top: 6rem;
+    padding-top: 2rem;
     position: static;
+    text-align: center;
   }
   .banner.v2 .text-cont h2 {
     font-size: 1.5rem;
@@ -1606,6 +1611,18 @@ footer .form-inline .btn {
   }
   footer ul.app-list li {
     float: none;
+  }
+  .Our-Stories .owl-carousel .owl-controls {
+    width: 100%;
+  }
+  .Our-Stories .owl-carousel .owl-controls .owl-nav [class*=owl-].owl-next {
+    right: 0;
+  }
+  .join-txt {
+    text-align: center;
+  }
+  .newsletter-sec {
+    margin-top: 2rem;
   }
 }
 
