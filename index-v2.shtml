@@ -57,7 +57,7 @@
 <!-- Header :: End -->
 
 <!-- Banner :: Start -->
-<div class="banner">
+<div class="banner v2">
     <div class="owl-cara-single owl-carousel">
         <div class="">
             <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
@@ -78,45 +78,45 @@
             <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                 <div class="container">
                     <div class="col-sm-4">
-                        <h2>Willing to be Parent?</h2>
+                        <h2>It’s all about our members</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
+                        <a href="#" class="btn btn-link">Know more about us</a>
                     </div>
                 </div>
             </div>
     
             <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
-                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+                <img src="resources/images/banner-img-02.jpg" alt="Banner-02"/>
             </div>
         </div>
         <div class="">
             <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                 <div class="container">
                     <div class="col-sm-4">
-                        <h2>Willing to be Parent?</h2>
+                        <h2>It’s all about our members</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
+                        <a href="#" class="btn btn-link">Know more about us</a>
                     </div>
                 </div>
             </div>
     
             <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
-                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+                <img src="resources/images/banner-img-02.jpg" alt="Banner-02"/>
             </div>
         </div>
         <div class="">
             <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                 <div class="container">
                     <div class="col-sm-4">
-                        <h2>Willing to be Parent?</h2>
+                        <h2>It’s all about our members</h2>
                         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
+                        <a href="#" class="btn btn-link">Know more about us</a>
                     </div>
                 </div>
             </div>
     
             <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
-                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+                <img src="resources/images/banner-img-02.jpg" alt="Banner-02"/>
             </div>
         </div>
     </div>
@@ -146,18 +146,18 @@
             <div class="container">
                 <div class="highlight-box">
                     <h2 class="main-tl">Useful Contacts</h2>
-                    <ul class="UC-list">
-                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                </div>                
+                <ul class="uc-list">
+                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
 
-                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                        <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    </ul>
-                </div>
+                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                </ul>
                 <div class="text-center">
                     <a href="#" class="btn btn-loadmore">Load More</a>
                 </div>

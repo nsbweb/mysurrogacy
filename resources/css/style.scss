@@ -148,7 +148,7 @@ header {
 .banner { 
     position: relative;
     z-index: 1;
-    padding:3.5rem 0 0 0; 
+    padding:0 0 0 0; 
     .text-cont{ 
         position: absolute;
         left: 0; 
@@ -172,6 +172,9 @@ header {
                 animation: rainbow-text-simple-animation 0.5s ease-in forwards;
             }
         }
+    }
+    &.v2 .text-cont {
+        align-items: flex-start;
     }
     & .img-cont {
         & svg { width:100%; }
@@ -519,15 +522,31 @@ header {
             
         }
     }
+ }
 
-    .UC-list { 
-        list-style: none;
-        padding:0; margin:0;
-        & li {
-            display: inline-block;
-            
-        }
-     }
+ 
+
+ .uc-list { 
+    list-style: none;
+    padding:0; 
+    margin:0 -1.875rem;
+    display: block;
+    @include clear_0;
+    & li {
+        width:25%;
+        display: inline-block;
+        float: left;
+        padding: 1.875rem ;
+        & a { 
+            display: block;
+            padding: 2rem;
+            background: $color02;
+            & img { 
+                object-fit: contain;
+                width:100%;
+            }
+        }        
+    }
  }
 /*Main Content CSS*/
 
