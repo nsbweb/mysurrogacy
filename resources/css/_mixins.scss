@@ -62,3 +62,82 @@
         clear: both;
     }    
 }
+
+@mixin gradientBdrBox {
+    width:100%;
+    border-radius: 0.625rem;
+    padding: 1.75rem 3rem;
+    background: $color00;
+    position: relative;
+    &:before { 
+        @include fullContent;      
+        background: $gradiantColor00;
+        left: -2px;
+        top: -2px;
+        width:calc(100% + 4px);
+        height:calc(100% + 4px);
+        z-index: -1;
+        border-radius: 0.625rem;
+    }    
+}
+
+@mixin BaseUl {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+@mixin shadeCircle {    
+    content: '';
+    width:22rem;
+    height: 22rem;
+    position: absolute;
+    left: 11rem ;
+    bottom: 11rem;
+    filter: blur(204px);    
+}
+
+@mixin bg-2x { 
+    background-size: 80% 100%; 
+    background-position:center;
+}
+
+@mixin bg-comp {
+    background: url(../images/comp-img.jpg) no-repeat center center;
+    background-color:$color02;
+    background-size:auto 100%;
+    background-position: left center;
+}
+
+@mixin hvr-underline-from-left{
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background: $color02;
+        height: 2px;
+        -webkit-transition-property: right;
+        transition-property: right;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    &:hover:before, 
+    &:focus:before, 
+    &:active:before {
+        right: 0;
+    }
+} 

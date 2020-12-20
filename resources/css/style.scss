@@ -36,6 +36,11 @@ h1 {
 }
 
 /*COMMON CSS*/
+:root {
+    --input-padding-x: .75rem;
+    --input-padding-y: .75rem;
+  }
+
 p { 
     color:$color02; 
     font-size: 1rem; 
@@ -103,7 +108,75 @@ img, svg  { max-width: 100%; }
 .btn-black { 
     background: $color00;
     color: $color02;
- }
+    overflow: hidden;
+    &:hover{
+        color: $color02;
+
+    } 
+}
+.bg-color11 { background: $color11; }
+.btn-block {display: block; }
+
+.btn-anim {
+    border: 0;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+    
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    &:before{
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $color06;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transform-origin: 0 50%;
+        transform-origin: 0 50%;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+        -webkit-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+    }
+    & > span {
+        position: relative;
+        z-index: 2;
+    }
+    &:hover:before,
+    &:focus:before, 
+    &:active:before{
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+.btn-arrow {
+    @include gradientColor;
+    @include gradientColorAnim; 
+    font-weight: 700;
+    padding: 0;
+    font-size: 1.25rem;
+    @include btnArrow;
+    &:hover{
+        animation: rainbow-text-simple-animation 0.5s ease-in forwards;
+    }
+}
 /*COMMON CSS*/
 
 
@@ -131,7 +204,7 @@ header {
             & .nav-link { 
                 color: $color03;
                 font-size: 1.12rem;
-                font-weight: 400;
+                font-weight: $fReg;
             }
             &.active .nav-link { 
                 color: $color02;
@@ -175,9 +248,39 @@ header {
     }
     &.v2 .text-cont {
         align-items: flex-start;
+        padding:10rem 0 0 0;
+        text-align: center;
+        &:before {
+            @include shadeCircle;
+            background: rgba(254, 206, 84, 0.2);
+            left: auto;
+            right: 11rem;
+        }
+        & h2 {
+            font-size: 3.25rem;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        & .btn-link {
+            position: absolute;
+            bottom: 2rem;
+            left: calc(50% - 10%);
+         }
     }
     & .img-cont {
         & svg { width:100%; }
+    }
+    &.v2 .img-cont {
+        &:before {
+            @include shadeCircle;
+            background: rgba(245, 54, 148, 0.3);
+        }
+        &:after {
+            @include shadeCircle;
+            background: rgba(156, 81, 169, 0.5);
+            left: calc(50% - 11rem);
+        }
     }
     & .owl-nav { display: none; }
 }
@@ -192,6 +295,15 @@ header {
 }
 
 .section { padding: 5rem 0;
+    &.bg-comp{
+        @include bg-comp;
+        position: relative;
+        &:before {
+            @include fullContent;
+            background:$color00;
+            opacity: 0.6;
+        }
+    }
     &.shade-bg {
         background: url(../images/shade-circle.png) no-repeat center -8rem;
     }
@@ -200,6 +312,9 @@ header {
         &:before { 
             @include fullContent;
             background: url(../images/womb-shape.png) no-repeat center bottom;
+        }        
+        &.bg-2x:before {
+            @include bg-2x;
         }
     }
     .container { @include zIndexup; }
@@ -249,6 +364,16 @@ header {
     margin-bottom: 2rem;
     & .main-tl {
         margin-bottom:1.5rem;
+        font-size: 2rem;
+    }
+    & h3.main-tl {
+        font-size: 1.5rem;
+        margin-bottom: 0.8rem;
+        font-weight: $fBold;        
+    }
+    & .sub-tl {
+        font-size: 1.5rem;
+        font-weight: $fReg;
     }
     & p { 
         font-size: 1rem;
@@ -492,21 +617,7 @@ header {
  }
 
  .join-txt { 
-    width:100%;
-    border-radius: 0.625rem;
-    padding: 1.75rem 3rem;
-    background: $color00;
-    position: relative;
-    &:before { 
-        @include fullContent;      
-        background: $gradiantColor00;
-        left: -2px;
-        top: -2px;
-        width:calc(100% + 4px);
-        height:calc(100% + 4px);
-        z-index: -1;
-        border-radius: 0.625rem;
-    }
+    @include gradientBdrBox;
     & .main-tl {
         @include gradientColor;
         margin: 0;
@@ -524,7 +635,103 @@ header {
     }
  }
 
- 
+ .def-style{     
+    @include BaseUl;
+    width:auto;
+    margin: 0 -2.5rem;
+    @include clear_0;
+    & > li {         
+        padding: 0 2.5rem;
+        display: inline-block;
+        float: left;
+    }
+    &.count-three {
+        li {
+            width: 33.33%;
+        }
+    }
+    &.count-two{
+        li{
+            width: 50%;
+        }
+    }
+ }
+
+ .i-am-list {
+    max-width: 51rem;
+    margin: 0 auto;
+     display: block;
+     & > li{
+         & > a {
+             text-decoration: none;
+             display: inline-block;
+             width:100%;
+             figure{
+                width: 31rem;
+                height: 26rem;
+                position: relative;
+                margin: 0;
+                & > img {
+                    width:20rem;
+                    height:auto;
+                    position: relative;
+                    z-index: 2;
+                    margin:0 auto;
+                    display: block;
+                    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                    filter: grayscale(100%);
+                }            
+                &:before{
+                    content: '';
+                    display: inline-block;
+                    position: absolute;
+                    width: 30rem;
+                    height: 30rem;
+                    left: calc(50% - 15rem);
+                    top: calc(50% - 15rem);
+                    z-index: 1;
+                    
+                    background: rgba(168, 64, 136, 0.5);
+                    filter: blur(204px);
+                    -webkit-transform: perspective(0px) translateZ(0);
+                    transform: perspective(0px) translateZ(0);
+                    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                    -webkit-transition-duration: 0.5s;
+                    transition-duration: 0.5s;
+                    opacity: 0;
+                }
+                & > figcaption {
+                    text-align: center;
+                    font-size: 2rem;
+                    color: $color02;
+                    text-transform: capitalize;
+                    font-weight: $fReg;
+                }
+            }
+            &:hover,
+            &.active {
+                figure{
+                    & > img {
+                        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+                        filter: grayscale(0%);
+                    }      
+                    &:before{
+                        webkit-transform: scale(1);
+                        transform: scale(1);
+                        -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+                        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+ }
+
+ .infoBox {
+    @include gradientBdrBox;
+    padding: 3.5rem 2rem;
+ } 
 
  .uc-list { 
     list-style: none;
@@ -548,6 +755,152 @@ header {
         }        
     }
  }
+
+
+ .form-signin {
+    width: 100%;
+    max-width: 34rem;
+    padding: 2.5rem;
+    background: $color02;
+    border-radius: 5px;
+    margin-left: auto;
+    & .highlight-box {
+        max-width: 80%;
+        margin:0 auto 1.5rem;
+        & .main-tl {
+            color: $color00;
+            margin-bottom: 0.2rem;
+        }
+        & p {
+            color: $color03;
+        }
+    }
+    & .form-label-group {
+        position: relative;
+        margin-bottom: 1rem;
+        & > input,
+        & > label {
+            padding: var(--input-padding-y) var(--input-padding-x);
+            line-height: 0.8;
+        }
+
+        & > label {
+            position: absolute;
+            top: 0;
+            left: calc(var(--bs-gutter-x)/ 2);
+            display: block;
+            width:calc(100% - calc(var(--bs-gutter-x)/ 2)*2);
+            margin-bottom: 0; /* Override default `<label>` margin */
+            line-height: 1.2;
+            color: $color12;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+            transition: all .1s ease-in-out;
+            font-size: 1rem;
+        }
+
+        & input::-webkit-input-placeholder {
+            color: transparent;
+        }
+
+        & input:-ms-input-placeholder {
+            color: transparent;
+        }
+
+        & input::-ms-input-placeholder {
+            color: transparent;
+        }
+
+        & input::-moz-placeholder {
+            color: transparent;
+        }
+
+        & input::placeholder {
+            color: transparent;
+        }
+
+        & input:not(:placeholder-shown) {
+            padding-top: calc(var(--input-padding-y) + var(--input-padding-y) * (2 / 3));
+            padding-bottom: calc(var(--input-padding-y) / 3);
+        }
+
+        & input:not(:placeholder-shown) ~ label {
+            padding-top: calc(var(--input-padding-y) / 3);
+            padding-bottom: calc(var(--input-padding-y) / 3);
+            font-size: 12px;
+            color: #777;
+        }
+    }
+    & .btn-black {
+        background-color: $color01;
+        font-size: 1rem;
+        font-weight: $fBold;
+        min-width: 12rem;
+        min-height: 3.25rem;
+    }
+}
+
+.hrzTabs.r-tabs {
+    & .responsive-tabs { 
+        margin-bottom: 2rem;
+
+        & .r-tabs-tab { 
+            display: inline-block; 
+            margin: 0 3rem; 
+            list-style: none;
+            & a { 
+                display: inline-block; 
+                padding: 0.4rem 0rem; 
+                font-size:1.25rem; 
+                text-decoration: none; 
+                position: relative; 
+                z-index: 2; 
+                color:$color02;
+                font-weight: 700; 
+                white-space: nowrap; 
+                @include hvr-underline-from-left;
+            }
+            &.r-tabs-state-active {
+                & a {
+                    &:before{
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+    & .r-tabs-panel { padding: 0; display: none; border:1px solid $color13; background: $color14;
+        & .text-box {
+            padding: 4rem;
+            .sub-tl{ 
+                font-size:1.5rem;
+                font-weight:700;
+                margin-bottom: 2rem; 
+            }
+            & p {
+                font-size: 1rem;
+                color: $color08;
+            }
+            & .btn {
+                font-size: 1.125rem;
+                padding-right:5.5rem;
+                &::after{
+                    width:5rem;
+                }
+            }
+        }
+    }
+    & .r-tabs-accordion-title { display: none;}
+    & .r-tabs-panel.r-tabs-state-active { display: block;}
+}
+
+
+
+/* Accordion responsive breakpoint */
+@media only screen and (max-width: 768px) { 
+.r-tabs .r-tabs-nav, .hrzTabs.r-tabs > .responsive-tabs { display: none !important; }
+.r-tabs .r-tabs-accordion-title { display: block; }
+}
 /*Main Content CSS*/
 
 
@@ -603,6 +956,10 @@ footer {
              display: block;
              li { 
                  display: inline-block;
+                max-width: 45%;
+                float: left;
+                margin-right: 5%;
+                align-items: center;
               }
               li + li { 
                  margin-top:0rem;
@@ -635,6 +992,71 @@ footer {
 @media (min-width: 768px) {
 
 }
+@media (max-width:1024px){
+    
+    html{font-size: 13px};
+    .section { padding: 2rem 0;  overflow: hidden;  }
+    .i-am-list > li > a figure { width:100%; height: auto;}
+    .def-style { margin: 0 -1rem; }
+    .def-style > li { padding: 0 1rem; }
+    // .navbar .navbar-nav .nav-item + .nav-item { margin-left: 0rem; }
+    // .uc-list li { padding: 0.875rem; }
+}
+@media (max-width:992px){
+    .navbar .navbar-brand {max-width: 15rem;}
+    .navbar .navbar-nav .nav-item + .nav-item {margin-left: 0rem;}
+    .infoBox {padding: 2rem 2rem; }
+    .uc-list {  margin:0  -0.875rem; }
+    .uc-list li { padding: 0.875rem; }
+}
+@media (max-width:599px){
+    .navbar { height: 5rem; width:100%; background: $color01; }
+    .navbar .navbar-brand { position: relative; z-index: 2; }
+    .navbar-dark .navbar-toggler {
+        right: 1rem;
+        position: absolute;
+        top: 1rem;
+    }
+    .navbar-collapse {  
+        background: $color01; 
+        top: 5rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 0 15px;
+        z-index: 1;
+        text-align: center;
+    }
+    .uc-list {
+        margin: 0;
+    }
+    .def-style { 
+        margin: 0; 
+        & > li {
+            padding: 0;
+            &+li{
+                margin-top: 2rem;
+            }
+        }        
+        &.count-three,
+        &.count-two {
+            & > li { width:100%; } 
+        }
+    } 
+    footer { text-align: center;}
+    .banner.v2 .text-cont {
+        padding-top: 6rem; 
+        position: static;
+    }
+    .banner.v2 .text-cont h2 { font-size: 1.5rem; }
+    .banner.v2 .text-cont .btn-link {
+        position: relative;
+        left: auto;
+        bottom: auto;
+    }
+    footer ul.app-list li {float: none; }
+}
+
 
 
 

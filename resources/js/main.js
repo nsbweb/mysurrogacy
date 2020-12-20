@@ -307,14 +307,14 @@ $(".has-submenu a[href=\"#\"]").click(function () {
 });
 
 /* Navigation Active JS */
-var href = window.location.href;
-  $('nav a').each(function(e,i) {
-    if (href.indexOf($(this).attr('href')) >= 0) {
-        $('.active').removeClass('active');
-        $(this).parent().addClass('active');
-        $(this).parents('.has-submenu').addClass('active');
-    }
-  });
+// var href = window.location.href;
+//   $('nav a').each(function(e,i) {
+//     if (href.indexOf($(this).attr('href')) >= 0) {
+//         $('.active').removeClass('active');
+//         $(this).parent().addClass('active');
+//         $(this).parents('.has-submenu').addClass('active');
+//     }
+//   });
 /* Navigation Active JS */
 
 /* Navigation JS */

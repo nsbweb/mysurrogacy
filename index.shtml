@@ -60,6 +60,9 @@
 <div class="banner">
     <div class="owl-cara-single owl-carousel">
         <div class="">
+            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+            </div>
             <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                 <div class="container">
                     <div class="col-sm-4">
@@ -68,13 +71,12 @@
                         <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
                     </div>
                 </div>
-            </div>
-    
-            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
-                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
             </div>
         </div>
-        <div class="">
+        <div class="">    
+            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+            </div>
             <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                 <div class="container">
                     <div class="col-sm-4">
@@ -83,13 +85,12 @@
                         <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
                     </div>
                 </div>
-            </div>
-    
-            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
-                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
             </div>
         </div>
-        <div class="">
+        <div class="">    
+            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+            </div>
             <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                 <div class="container">
                     <div class="col-sm-4">
@@ -98,13 +99,12 @@
                         <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
                     </div>
                 </div>
-            </div>
-    
-            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
-                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
             </div>
         </div>
-        <div class="">
+        <div class="">    
+            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+            </div>
             <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                 <div class="container">
                     <div class="col-sm-4">
@@ -113,10 +113,6 @@
                         <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
                     </div>
                 </div>
-            </div>
-    
-            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
-                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
             </div>
         </div>
     </div>
