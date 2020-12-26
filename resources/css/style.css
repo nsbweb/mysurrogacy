@@ -553,6 +553,23 @@ header.sticky .navbar {
   opacity: 0.3;
 }
 
+.section .video-container .rtopVideoPlayerWrapper .rtopVideoPlayer .rtopVideoHolder.hasFAIcons:after {
+  content: "";
+  width: 8rem;
+  height: 8rem;
+  background-image: url(../images/play-btn-circle.svg), url(../images/play-icon.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
+  background-size: contain, auto;
+  left: calc(50% - 4rem);
+  top: calc(50% - 4rem);
+}
+
+.section .video-container .rtopVideoPlayerWrapper .rtopVideoPlayer .rtopVideoHolder video {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .section .video-container .btn-play {
   position: absolute;
   border: 2px solid #FFFFFF;

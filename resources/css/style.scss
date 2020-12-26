@@ -323,6 +323,28 @@ header {
         &:before { 
             @include overlay;
         }
+        & .rtopVideoPlayerWrapper {
+            & .rtopVideoPlayer {
+                & .rtopVideoHolder{
+                    &.hasFAIcons{
+                        &:after{
+                            content:"";
+                            width:8rem;
+                            height: 8rem;
+                            background-image: url(../images/play-btn-circle.svg), url(../images/play-icon.svg);
+                            background-repeat: no-repeat, no-repeat;
+                            background-position: center center, center center;
+                            background-size: contain, auto;
+                            left:calc(50% - 4rem);
+                            top:calc(50% - 4rem);
+                        }
+                    }
+                    & video {
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
         .btn-play {
             position: absolute;
             border: 2px solid $color02;

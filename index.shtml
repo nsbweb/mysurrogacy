@@ -23,6 +23,7 @@
 <script src="resources/js/modernizr-2.6.2.min.js" ></script>
 
 <!-- Custom styles for this template -->
+<link href="resources/css/rtop.videoPlayer.1.0.0.min.css" rel="stylesheet">
 <link href="resources/css/plugin.css" rel="stylesheet">
 <link href="resources/css/all.min.css" rel="stylesheet">
 <link href="resources/css/style.css" rel="stylesheet">
@@ -130,8 +131,8 @@
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div class="video-container">
-                    <img src="resources/images/video-snap-01.jpg" alt="Video"/>
-                    <a href="#" class="btn btn-play"><i class="fa fa-play"></i></a>
+                    <div class="myVideo" id="my_video" data-video="resources/videos/MSJ-Promo-Video-LOW-RES.mp4" data-poster="resources/images/video-snap-01.jpg" data-type='video/mp4'></div>
+                    <!-- <a href="#" class="btn btn-play"><i class="fa fa-play"></i></a> -->
                 </div>
             </div>
         </div>
@@ -688,8 +689,17 @@
 <script src="resources/js/jquery-1.11.3.min.js"></script>
 <script src="resources/js/bootstrap.bundle.min.js"></script>
 <script src="resources/js/plugins.js"></script>
+<script src="resources/js/rtop.videoPlayer.1.0.0.min.js"></script>
 <script src="resources/js/main.js"></script>
 <script>
+    $(document).ready(function(){
+        var vid = $('#my_video').RTOP_VideoPlayer({
+            showFullScreen: true,
+            showTimer: true,
+            showSoundControl: true
+        });
+    });
+
     window.onscroll = function() {stickyheader()};
   
   var header = document.querySelector("header");
