@@ -141,7 +141,7 @@
     <!-- What is  Membership? :: End -->
 
     <!-- Useful Contacts :: Start -->
-        <div class="section shade-womb bg-2x animated" data-animation="fadeInUp" data-animation-delay="300">
+        <div class="section shade-womb bg-2x has-view-more animated" data-animation="fadeInUp" data-animation-delay="300">
             <div class="container">
                 <div class="highlight-box">
                     <h2 class="main-tl">Useful Contacts</h2>
@@ -156,9 +156,19 @@
                     <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
                     <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
                     <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+
+                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+
+                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
                 </ul>
                 <div class="text-center">
-                    <a href="#" class="btn btn-loadmore">Load More</a>
+                    <a href="#" class="btn btn-loadmore btn-view-more">Load More</a>
                 </div>
             </div>
         </div>
@@ -288,7 +298,7 @@
     <div class="container">
     <div class="row">
         <div class="col-sm-4 animated" data-animation="fadeInUp" data-animation-delay="300">
-            <a href="#"><img src="resources/images/footer-logo.svg" alt=""></a>
+            <a href="#" class="footer-logo"><img src="resources/images/footer-logo.svg" alt=""></a>
         </div>
         <div class="col">
             <ul class="animated" data-animation="fadeInUp" data-animation-delay="300">
@@ -352,6 +362,22 @@
       header.classList.remove("sticky");
     }
   }
+
+  $('.has-view-more').each(function(){
+      $(this).find('.hidden').slideUp();
+      $(this).find('.btn-view-more').click(function(e){
+          e.preventDefault();
+        if(!$(this).hasClass('collapsed')){
+            $(this).addClass('collapsed')
+            $(this).parents('.has-view-more').find('.hidden').slideDown();
+            $(this).text('Load Less');
+        }else{
+            $(this).removeClass('collapsed')
+            $(this).parents('.has-view-more').find('.hidden').slideUp();
+            $(this).text('Load More');
+        }
+        });
+  })
   </script>
 </body>
 </html>
