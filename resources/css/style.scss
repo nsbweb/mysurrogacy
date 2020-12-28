@@ -48,6 +48,7 @@ p {
         margin-bottom: 0;       
     }
 }
+
 img, svg  { max-width: 100%; }
 
 .no-gutters {
@@ -60,6 +61,18 @@ img, svg  { max-width: 100%; }
       padding-left: 0;
     }
   }
+
+.mfp-figure {
+    & figure {
+        min-width: 300px;
+        height: 300px;
+        display: flex;
+        align-items: center;
+    }    
+    &:after{
+        background-color: $color02;
+    }
+}
 
 .animated,
 .animated .animated .fa,
@@ -245,12 +258,82 @@ header {
                 animation: rainbow-text-simple-animation 0.5s ease-in forwards;
             }
         }
+        &.v2{
+            & h2{
+                font-size: 9rem;
+                font-weight: 700;
+                color: rgba(255, 255, 255, 0.1);
+                @media (max-width:$ipadPotrait){
+                    font-size:6rem;
+                }
+                @media (max-width:$mobileLarge){
+                    font-size:4rem;
+                }
+            }
+            & .cont-in { 
+                padding: 1rem;
+                max-width: 80%;
+                margin-bottom:10rem;
+                @media (max-width:$ipadPotrait){
+                    margin-bottom:0rem;
+                }
+                @media (max-width:$mobileLarge){
+                    max-width: 100%;
+                }
+                & p{
+                    font-size: 2rem;
+                    padding:0 3rem;
+                    color: $color02;
+                    background-image: url(../images/mark-top.svg);
+                    background-repeat: no-repeat;
+                    background-position: left top;
+                    background-size: 6%;
+                    @media (max-width:$ipadPotrait){
+                        font-size: 1.2rem;
+                    }
+                    @media (max-width:$mobileLarge){
+                        padding:0 1rem;
+                    }
+                    &:after{
+                        display: inline-block;
+                        content: '';
+                        background:url(../images/mark-bottom.svg) no-repeat left top;
+                        width:2rem;
+                        height:2rem;
+                        position: absolute;
+                        background-size: contain;
+                        @media (max-width:$ipadPotrait){
+                            width:1.4rem;
+                        }
+                    }
+                }
+                & .name{
+                    display: block;
+                    text-align: right;
+                    font-weight: 700;
+                    font-size: 1.5rem;
+                    color: $color15;
+                    @media (max-width:$ipadPotrait){
+                        font-size: 1rem;
+                    }
+                }
+             }
+        }
     }
     &.v2 {
+            & .img-cont {
+                & img {
+                    width:100%;
+                    object-fit: contain;
+                }
+            }
             & .text-cont {
             align-items: flex-start;
             padding:10rem 0 0 0;
             text-align: center;
+            & .container{
+                height: 100%;
+            }
             &:before {
                 @include shadeCircle;
                 background: rgba(254, 206, 84, 0.2);
@@ -314,13 +397,21 @@ header {
     }
     &.shade-bg {
         background: url(../images/shade-circle.png) no-repeat center -8rem;
+        background-size: contain;
     }
     &.shade-womb { 
         position: relative;
         &:before { 
             @include fullContent;
             background: url(../images/womb-shape.png) no-repeat center bottom;
-        }        
+            background-size: contain;
+        }
+        &.womb-left-50 {
+            &:before { 
+                width: 50rem;
+                left:calc(50% - 40rem)
+            }
+        }
         &.bg-2x:before {
             @include bg-2x;
         }
@@ -432,11 +523,13 @@ header {
             width: auto;
         }
     }
-    .owl-stage-outer { padding-top: 5rem; 
+    .owl-stage-outer { 
+        padding-top: 5rem; 
+        overflow: visible;
         & .owl-item { 
             &> div {
                 cursor: pointer;
-                margin: 6% 8%;
+                margin: 6% 16%;
                 transition: margin 0.4s ease;
                 opacity: 1;
                 & .img-cont { 
@@ -460,7 +553,7 @@ header {
                         height:calc(100% - 2rem);
                         left: 1rem;
                         top: 1rem;
-                        background: rgba(250, 79, 103, 0.2);
+                        background: rgba(250, 79, 103, 0.3);
                         filter: blur(204px);
                         overflow: hidden;
                     }
@@ -484,6 +577,8 @@ header {
                 & .text-cont {
                     display: none;
                     padding: 0 1rem 0 2rem;
+                    padding: 0;
+                    text-align:  center;
                 }
             }
             &.center > div {
@@ -689,6 +784,13 @@ header {
                 max-width: 100%;
             }
         }
+        & .text-cont {
+            padding: 2rem;
+            & h4 { font-size: 1.5rem;}
+            & p{
+                color: $color03;
+            }
+        }
     }     
  }
 
@@ -711,31 +813,33 @@ header {
     }
  }
 
- .def-style{     
-    @include BaseUl;
-    width:auto;
-    margin: 0 -2.5rem;
-    @include clear_0;
-    & > li {         
-        padding: 0 2.5rem;
-        display: inline-block;
-        float: left;
-    }
-    &.count-three {
-        li {
-            width: 33.33%;
+    .def-style{     
+        @include BaseUl;
+        width:auto;
+        margin: 0 -2.5rem;
+        @include clear_0;
+        & > li {         
+            padding: 0 2.5rem;
+            display: inline-block;
+            float: left;
+        }
+        &.count-three {
+            li {
+                width: 33.33%;
+            }
+        }
+        &.count-two{
+            li{
+                width: 50%;
+            }
         }
     }
-    &.count-two{
-        li{
-            width: 50%;
-        }
-    }
- }
 
- .i-am-list {
-    max-width: 51rem;
-    margin: 0 auto;
+    .i-am-list-wrap{
+        max-width: 51rem;
+        margin: 0 auto;
+    }
+    .i-am-list {
      display: block;
      & > li{
          & > a {
@@ -743,19 +847,20 @@ header {
              display: inline-block;
              width:100%;
              figure{
-                width: 31rem;
+                width: 100%;
                 height: 26rem;
                 position: relative;
                 margin: 0;
+                padding-bottom: 4.5rem;
                 & > img {
-                    width:20rem;
+                    width:18rem;
                     height:auto;
                     position: relative;
                     z-index: 2;
                     margin:0 auto;
                     display: block;
-                    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
                     filter: grayscale(100%);
+                    transition: transform .2s;
                 }            
                 &:before{
                     content: '';
@@ -769,10 +874,8 @@ header {
                     
                     background: rgba(168, 64, 136, 0.5);
                     filter: blur(204px);
-                    -webkit-transform: perspective(0px) translateZ(0);
                     transform: perspective(0px) translateZ(0);
                     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-                    -webkit-transition-duration: 0.5s;
                     transition-duration: 0.5s;
                     opacity: 0;
                 }
@@ -782,19 +885,21 @@ header {
                     color: $color02;
                     text-transform: capitalize;
                     font-weight: $fReg;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom:1rem;
                 }
             }
             &:hover,
             &.active {
                 figure{
                     & > img {
-                        -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+                        transform: scale(1.2);
                         filter: grayscale(0%);
                     }      
                     &:before{
-                        webkit-transform: scale(1);
                         transform: scale(1);
-                        -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
                         transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
                         opacity: 1;
                     }
@@ -819,17 +924,21 @@ header {
         width:25%;
         display: inline-block;
         float: left;
-        padding: 1.875rem ;
+        padding: 0.875rem ;
         & a { 
             display: block;
-            padding: 2rem;
+            padding: 1.5rem;
             background: $color02;
             & img { 
                 object-fit: contain;
-                width:100%;
+                width:100%;                
+                transition: transform .5s;
             }
             @media (max-width:$mobileLarge) {
                 padding: 0.5rem;
+            }
+            &:hover img {
+                transform: scale(1.1);
             }
         }
         @media (max-width:$ipadPotrait) {
@@ -1087,9 +1196,9 @@ footer {
         }
     }
     .form-inline { 
-        & .form-control { border-radius: 0; }
+        & .form-control { border-radius: 0; width:calc(100% - 6rem);}
         & .btn  { border-radius: 0; 
-            width:140px;
+            width:6rem;
         }
     }
     @media (max-width:$mobileLarge) {
@@ -1198,4 +1307,30 @@ footer {
 100% {
     background-size: 650%;
 }
+}
+
+
+.ajax-text-and-image {
+    max-width:900px; 
+    margin: 20px auto; 
+    background: $color00; 
+    padding: 0; 
+    line-height: 1.4rem;
+    border:2px solid $color13;
+    & .ajcol {
+        width: 50%; 
+        float:left;
+        & div:first-child{
+            padding: 2rem;
+        }
+        & img {
+            width: 100%; height: auto;
+        }
+    }
+}
+@media all and (max-width:30em) {
+    .ajcol { 
+        width: 100%;
+        float:none;
+    }
 }

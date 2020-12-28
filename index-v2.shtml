@@ -26,8 +26,8 @@
 <!-- Custom styles for this template -->
 <link href="resources/css/plugin.css" rel="stylesheet">
 <link href="resources/css/all.min.css" rel="stylesheet">
+<link href="resources/css/magnific-popup.css" rel="stylesheet">
 <link href="resources/css/style.css" rel="stylesheet">
-<link href="resources/css/media.css" rel="stylesheet">
 </head>
 
 <body>
@@ -63,7 +63,7 @@
             <img src="resources/images/banner-img-02.jpg" alt="Banner-02"/>
         </div>
         <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
-            <div class="container justify-content-md-center">
+            <div class="container d-sm-flex justify-content-md-center">
                 <div class="col-sm-8 mx-auto">
                     <h2>It’s all about our members</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
@@ -102,7 +102,7 @@
                                     <div class="text-box">
                                         <h3 class="sub-tl animated" data-animation="fadeInUp" data-animation-delay="400">Intended Parents</h2>
                                         <p class=" animated" data-animation="fadeInUp" data-animation-delay="500">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        <a href="#" class="btn btn-arrow"><span>View more</span></a>
+                                        <a href="ajax-data/intended-parents.html" class="btn btn-arrow ajax-popup"><span>View more</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -110,13 +110,13 @@
                         <div id="tab-2">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-sm-6 animated" data-animation="fadeInUp" data-animation-delay="300">
-                                    <img src="resources/images/intended-parents-img-01.jpg" alt="">
+                                    <img src="https://proudfertility.com/wp-content/uploads/2016/10/Do-You-Need-A-Supermodel-Pose-To-Be-An-Egg-Donor.jpg" alt="">
                                 </div>
                                 <div class="col-sm-6 animated" data-animation="fadeInUp" data-animation-delay="400">
                                     <div class="text-box">
                                         <h3 class="sub-tl animated" data-animation="fadeInUp" data-animation-delay="400">Egg Donors</h2>
                                         <p class=" animated" data-animation="fadeInUp" data-animation-delay="500">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        <a href="#" class="btn btn-arrow"><span>View more</span></a>
+                                        <a href="ajax-data/egg-donors.html" class="btn btn-arrow ajax-popup"><span>View more</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -124,13 +124,13 @@
                         <div id="tab-3">
                             <div class="row no-gutters align-items-center">
                                 <div class="col-sm-6 animated" data-animation="fadeInUp" data-animation-delay="300">
-                                    <img src="resources/images/intended-parents-img-01.jpg" alt="">
+                                    <img src="https://surrogate.com/wp-content/uploads/2017/03/How-Can-I-Become-a-Surrogate-Mother_Getty.jpg" alt="">
                                 </div>
                                 <div class="col-sm-6 animated" data-animation="fadeInUp" data-animation-delay="400">
                                     <div class="text-box">
                                         <h3 class="sub-tl animated" data-animation="fadeInUp" data-animation-delay="400">Surrogates</h2>
                                         <p class=" animated" data-animation="fadeInUp" data-animation-delay="500">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                        <a href="#" class="btn btn-arrow"><span>View more</span></a>
+                                        <a href="ajax-data/surrogates.html" class="btn btn-arrow ajax-popup"><span>View more</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -147,27 +147,31 @@
                 <div class="highlight-box">
                     <h2 class="main-tl">Useful Contacts</h2>
                 </div>                
-                <ul class="uc-list">
-                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-
-                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    <li><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-
-                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-
-                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                    <li class="hidden"><a href="#"><img src="resources/images/uc-image-01.png" alt=""></a></li>
-                </ul>
+                <div class="row">
+                    <div class="col-sm-8 mx-auto">
+                        <ul class="uc-list popup-gallery">
+                            <li><a href="resources/images/uc-image-01.png" title="Useful Contacts 01"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                            <li><a href="resources/images/uc-image-01.png" title="Useful Contacts 02"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                            <li><a href="resources/images/uc-image-01.png" title="Useful Contacts 03"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                            <li><a href="resources/images/uc-image-01.png" title="Useful Contacts 04"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+        
+                            <li><a href="resources/images/uc-image-01.png" title="Useful Contacts 05"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                            <li><a href="resources/images/uc-image-01.png" title="Useful Contacts 06"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                            <li><a href="resources/images/uc-image-01.png" title="Useful Contacts 07"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                            <li><a href="resources/images/uc-image-01.png" title="Useful Contacts 08"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+        
+                            <li class="hidden"><a href="resources/images/uc-image-01.png" title="Useful Contacts 09"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                            <li class="hidden"><a href="resources/images/uc-image-01.png" title="Useful Contacts 10"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                            <li class="hidden"><a href="resources/images/uc-image-01.png" title="Useful Contacts 11"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                            <li class="hidden"><a href="resources/images/uc-image-01.png" title="Useful Contacts 12"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+        
+                            <li class="hidden"><a href="resources/images/uc-image-01.png" title="Useful Contacts 13"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                            <li class="hidden"><a href="resources/images/uc-image-01.png" title="Useful Contacts 14"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                            <li class="hidden"><a href="resources/images/uc-image-01.png" title="Useful Contacts 15"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                            <li class="hidden"><a href="resources/images/uc-image-01.png" title="Useful Contacts 16"><img src="resources/images/uc-image-01.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="text-center">
                     <a href="#" class="btn btn-loadmore btn-view-more">Load More</a>
                 </div>
@@ -181,40 +185,42 @@
                 <div class="highlight-box">
                     <h2 class="main-tl">I am...</h2>
                 </div>
-                <ul class="def-style count-two i-am-list">
-                    <li class="active">
-                        <a href="#" class="active">
-                            <figure>
-                                <img src="resources/images/egg-donor.png" alt="Egg Donor">
-                                <figcaption>Egg Donor</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <figure>
-                                <img src="resources/images/surrogate.png" alt="surrogate">
-                                <figcaption>surrogate</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <figure>
-                                <img src="resources/images/IP.png" alt="IP">
-                                <figcaption>IP</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <figure>
-                                <img src="resources/images/IP-rotate.png" alt="Fourth Option">
-                                <figcaption>Fourth Option</figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                </ul>
+                <div class="i-am-list-wrap">
+                    <ul class="def-style count-two i-am-list">
+                        <li class="active">
+                            <a href="#" class="">
+                                <figure>
+                                    <img src="resources/images/egg-donor.png" alt="Egg Donor">
+                                    <figcaption>Egg Donor</figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="resources/images/surrogate.png" alt="surrogate">
+                                    <figcaption>surrogate</figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="resources/images/IP.png" alt="IP">
+                                    <figcaption>IP</figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="resources/images/IP-rotate.png" alt="Fourth Option">
+                                    <figcaption>Fourth Option</figcaption>
+                                </figure>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     <!-- I am... :: End -->
@@ -349,36 +355,8 @@
 <script src="resources/js/jquery-1.11.3.min.js"></script>
 <script src="resources/js/bootstrap.bundle.min.js"></script>
 <script src="resources/js/plugins.js"></script>
+<script src="resources/js/rtop.videoPlayer.1.0.0.min.js"></script>
+<script src="resources/js/jquery.magnific-popup.js"></script>
 <script src="resources/js/main.js"></script>
-<script>
-    window.onscroll = function() {stickyheader()};
-  
-  var header = document.querySelector("header");
-  var sticky = header.offsetTop;
-  
-  function stickyheader() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  }
-
-  $('.has-view-more').each(function(){
-      $(this).find('.hidden').slideUp();
-      $(this).find('.btn-view-more').click(function(e){
-          e.preventDefault();
-        if(!$(this).hasClass('collapsed')){
-            $(this).addClass('collapsed')
-            $(this).parents('.has-view-more').find('.hidden').slideDown();
-            $(this).text('Load Less');
-        }else{
-            $(this).removeClass('collapsed')
-            $(this).parents('.has-view-more').find('.hidden').slideUp();
-            $(this).text('Load More');
-        }
-        });
-  })
-  </script>
 </body>
 </html>
