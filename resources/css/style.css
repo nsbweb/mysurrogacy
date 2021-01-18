@@ -368,6 +368,19 @@ header.sticky .navbar {
   z-index: 2;
 }
 
+.banner .text-cont.v2 h2 {
+  font-size: 5rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.banner .text-cont.v2 h2 b {
+  color: #fff;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+}
+
 .banner .text-cont p {
   color: #999999;
 }

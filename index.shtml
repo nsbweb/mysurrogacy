@@ -78,12 +78,10 @@
             <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
                 <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
             </div>
-            <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+            <div class="text-cont v2 animated" data-animation="fadeInUp" data-animation-delay="400">
                 <div class="container">
                     <div class="col-sm-4">
-                        <h2>Willing to be Parent?</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                        <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
+                        <h2><b>Become a</b> known Egg Donor</h2>
                     </div>
                 </div>
             </div>

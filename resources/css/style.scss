@@ -231,6 +231,19 @@ header {
         display: flex;
         align-items: center;
         z-index: 2;
+        &.v2 {
+            & h2 {
+                font-size: 5rem;
+                font-weight: 900;
+                color: #fff;
+                & b {
+                    color: #fff;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke-width: 1px;
+                    -webkit-text-stroke-color: #fff;
+                }
+            }
+        }
         & p {
             color:$color08;
         }
