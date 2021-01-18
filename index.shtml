@@ -9,7 +9,8 @@
 <title>Home :: My Surrogacy</title>
 
 <!-- Bootstrap core CSS -->
-<link href="resources/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<!-- <link href="resources/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+<link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Favicons -->
 <link rel="apple-touch-icon" href="resources/images/favicons/apple-touch-icon.png" sizes="180x180">
@@ -26,6 +27,7 @@
 <link href="resources/css/rtop.videoPlayer.1.0.0.min.css" rel="stylesheet">
 <link href="resources/css/plugin.css" rel="stylesheet">
 <link href="resources/css/all.min.css" rel="stylesheet">
+<link href="resources/css/magnific-popup.css" rel="stylesheet">
 <link href="resources/css/style.css" rel="stylesheet">
 <link href="resources/css/media.css" rel="stylesheet">
 </head>
@@ -76,12 +78,18 @@
         </div>
         <div class="">    
             <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
-                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+                <img src="resources/images/banner-img-03.jpg" alt="Banner-02"/>
             </div>
             <div class="text-cont v2 animated" data-animation="fadeInUp" data-animation-delay="400">
                 <div class="container">
                     <div class="col-sm-4">
                         <h2><b>Become a</b> known Egg Donor</h2>
+                    <div class="col-sm-8">
+                        <h2>Egg Donor</h2>
+                        <div class="cont-in">
+                            <p>Lorem Ipsum is simply dummy text of the  typesetting industry.</p>
+                            <span class="name">- Sandra D’mellow</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,14 +145,17 @@
     <!-- Who We are :: End -->
 
     <!-- Our Misson :: Start -->
-        <div class="section animated" data-animation="fadeInUp" data-animation-delay="300">
+        <div class="section animated has-view-more" data-animation="fadeInUp" data-animation-delay="300">
             <div class="container">
                 <div class="highlight-box">
                     <h2 class="main-tl">Our Mission</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p class="hidden">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
+                    <p class="hidden">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesstandard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
+                    <p class="hidden">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's sttext of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting</p>
                 </div>
                 <div class="text-center">
-                    <a href="#" class="btn btn-loadmore">Load More</a>
+                    <a href="#" class="btn btn-loadmore btn-view-more">Load More</a>
                 </div>
             </div>
         </div>
@@ -248,14 +259,14 @@
     <!-- Our Team :: End -->
 
     <!-- Our Stories :: Start -->
-        <div class="section shade-bg Our-Stories">
+        <div class="section shade-bg Our-Stories shade-womb womb-left-50">
             <div class="container">
                 <div class="highlight-box">
                     <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Our Stories</h2>
                 </div>
                 <div class="owl-cara-single owl-carousel animated" data-animation="fadeInUp" data-animation-delay="300">
                     <div class="slide">                            
-                        <div class="row">
+                        <div class="row d-sm-flex align-items-center">
                             <div class="col-sm-6 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
                                 <img src="resources/images/gallery-img-01.jpg" alt="">
                             </div>
@@ -266,7 +277,7 @@
                         </div>
                     </div>
                     <div class="slide">             
-                        <div class="row">
+                        <div class="row d-sm-flex align-items-center">
                             <div class="col-sm-6 img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
                                 <img src="resources/images/gallery-img-01.jpg" alt="">
                             </div>
@@ -277,7 +288,7 @@
                         </div>
                     </div>
                     <div class="slide">
-                        <div class="row">
+                        <div class="row d-sm-flex align-items-center">
                             <div class="col-sm-6 img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
                                 <img src="resources/images/gallery-img-01.jpg" alt="">
                             </div>
@@ -483,28 +494,7 @@
 <script src="resources/js/bootstrap.bundle.min.js"></script>
 <script src="resources/js/plugins.js"></script>
 <script src="resources/js/rtop.videoPlayer.1.0.0.min.js"></script>
+<script src="resources/js/jquery.magnific-popup.js"></script>
 <script src="resources/js/main.js"></script>
-<script>
-    $(document).ready(function(){
-        var vid = $('#my_video').RTOP_VideoPlayer({
-            showFullScreen: true,
-            showTimer: true,
-            showSoundControl: true
-        });
-    });
-
-    window.onscroll = function() {stickyheader()};
-  
-  var header = document.querySelector("header");
-  var sticky = header.offsetTop;
-  
-  function stickyheader() {
-    if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-    } else {
-      header.classList.remove("sticky");
-    }
-  }
-  </script>
 </body>
 </html>

@@ -284,8 +284,33 @@ $(function(){
         $str = $strtemp + '<a class="inline-popup" href="#'+ $PopUPID + '">' + ' Read More' + '</a>' + '<span class="hide">' + $str.substr($limit,$str.length) + '</span>';
         $(this).html($str); // Write the string to the DOM 
     });
+
+    $('.inline-popup').magnificPopup({
+        type:'inline',
+        mainClass: 'mfp-with-zoom',
+        midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    });
+    $('.ajax-popup').magnificPopup({
+        type: 'ajax'
+    });
+    $('.popup-gallery').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+            return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+            }
+        }
+    });
 });
-/* Single Banner - 27-08-2020*/
 
 /* Navigation JS */
 $(".sub-menu").hide();
@@ -361,3 +386,38 @@ $owlSingle.owlCarousel({
     autoplayTimeout:6000,
     autoplayHoverPause:true
 });
+
+var vid = $('#my_video').RTOP_VideoPlayer({
+    showFullScreen: true,
+    showTimer: true,
+    showSoundControl: true
+}); 
+
+window.onscroll = function() {stickyheader()};
+  
+  var header = document.querySelector("header");
+  var sticky = header.offsetTop;
+  
+  function stickyheader() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  }
+
+  $('.has-view-more').each(function(){
+      $(this).find('.hidden').slideUp();
+      $(this).find('.btn-view-more').click(function(e){
+          e.preventDefault();
+        if(!$(this).hasClass('collapsed')){
+            $(this).addClass('collapsed')
+            $(this).parents('.has-view-more').find('.hidden').slideDown();
+            $(this).text('Load Less');
+        }else{
+            $(this).removeClass('collapsed')
+            $(this).parents('.has-view-more').find('.hidden').slideUp();
+            $(this).text('Load More');
+        }
+        });
+  });
