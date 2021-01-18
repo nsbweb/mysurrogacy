@@ -10,7 +10,6 @@ $(function() {
     anSpFast = 400; 
     isMobileNav = false;
     mobileNav = '';
-    checkMQs();
     //adjustMenuHov();
 });
 $(window).resize(function() {
@@ -27,7 +26,7 @@ if (!window.addEventListener) {
 }
 
 function sizeOrientationChange() {
-    checkMQs();
+    //checkMQs();
 }
 
 var $nav_overlay = $('#nav_overlay');
@@ -45,24 +44,6 @@ $(".menuTrigger").bind('touchend , click', function(e) {
 });
 
 var ChangeView = function() {}
-
-function checkMQs() {
-    if (Modernizr.mq('only all')) {
-        mq_red_check = Modernizr.mq(mq_red);
-        mq_orange_check = Modernizr.mq(mq_orange);
-        mq_yellow_check = Modernizr.mq(mq_yellow);
-        mq_green_check = Modernizr.mq(mq_green);
-        mq_blue_check = Modernizr.mq(mq_blue);
-        mq_purple_check = Modernizr.mq(mq_purple);
-    } else {
-        mq_red_check = false;
-        mq_orange_check = true;
-        mq_yellow_check = false;
-        mq_green_check = false;
-        mq_blue_check = false;
-        mq_purple_check = false;
-    }
-}
 
 function checkFeatures() {
     touchEnabled = Modernizr.touch;
@@ -287,7 +268,7 @@ $(function(){
 
     $('.inline-popup').magnificPopup({
         type:'inline',
-        mainClass: 'mfp-with-zoom',
+        mainClass: 'mfp-with-zoom mfp-zoom-in',
         midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
     });
     $('.ajax-popup').magnificPopup({
@@ -296,6 +277,40 @@ $(function(){
     $('.popup-gallery').magnificPopup({
         delegate: 'a',
         type: 'image',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile mfp-fade',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+            return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+            }
+        }
+    });
+    $('.popup-gallery-ajax').magnificPopup({
+        delegate: 'a',
+        type: 'ajax',
+        tLoading: 'Loading image #%curr%...',
+        mainClass: 'mfp-img-mobile mfp-fade',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+            titleSrc: function(item) {
+            return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+            }
+        }
+    });
+    $('.popup-gallery-inline').magnificPopup({
+        delegate: 'a',
+        type: 'inline',
         tLoading: 'Loading image #%curr%...',
         mainClass: 'mfp-img-mobile',
         gallery: {

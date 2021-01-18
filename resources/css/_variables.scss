@@ -4,6 +4,7 @@
          url('../fonts/effra_std_lt-webfont.woff') format('woff');
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
          url('../fonts/effra_std_rg-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -20,6 +22,7 @@
          url('../fonts/effra_std_bd-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 $basefont : 16px;

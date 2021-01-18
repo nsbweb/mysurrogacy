@@ -75,6 +75,85 @@ img, svg  { max-width: 100%; }
     }
 }
 
+/* 
+
+====== Zoom effect ======
+
+*/
+.mfp-zoom-in {
+  
+    /* start state */
+    .mfp-with-anim {
+      opacity: 0;
+      transition: all 0.2s ease-in-out; 
+      transform: scale(0.8); 
+    }
+    
+    &.mfp-bg {
+      opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+    
+    /* animate in */
+    &.mfp-ready {
+      .mfp-with-anim {
+        opacity: 1;
+        transform: scale(1); 
+      }
+      &.mfp-bg {
+        opacity: 0.8;
+      }
+    }
+    
+    /* animate out */
+    &.mfp-removing {
+      
+      .mfp-with-anim {
+        transform: scale(0.8); 
+        opacity: 0;
+      }
+      &.mfp-bg {
+        opacity: 0;
+      }
+      
+    }
+    
+  }
+
+  /* overlay at start */
+.mfp-fade.mfp-bg {
+    opacity: 0;
+  
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+  }
+  /* overlay animate in */
+  .mfp-fade.mfp-bg.mfp-ready {
+    opacity: 0.8;
+  }
+  /* overlay animate out */
+  .mfp-fade.mfp-bg.mfp-removing {
+    opacity: 0;
+  }
+  
+  /* content at start */
+  .mfp-fade.mfp-wrap .mfp-content {
+    opacity: 0;
+  
+    -webkit-transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    transition: all 0.15s ease-out;
+  }
+  /* content animate it */
+  .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+    opacity: 1;
+  }
+  /* content animate out */
+  .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+    opacity: 0;
+  }
+
 .animated,
 .animated .animated .fa,
 .animated .fa,
@@ -206,6 +285,7 @@ header {
 }
 .navbar {
     padding: 0;
+    z-index: 1030;
     & .navbar-brand {
         padding: 0;
         position: absolute;
@@ -224,7 +304,7 @@ header {
                 color: $color02;
                 font-weight: 700;
             }
-            & + .nav-item { margin-left:2rem;  }
+            & + .nav-item { margin-left:1.2rem;  }
         }
     }
 }
@@ -236,7 +316,14 @@ header {
     position: relative;
     z-index: 1;
     padding:0 0 0 0; 
-    .text-cont{ 
+    & .img-cont{
+        & img {
+            width: 100%;
+            max-width:100%;
+            height: auto;
+        }
+    }
+    & .text-cont{ 
         position: absolute;
         left: 0; 
         right: 0 ; 
@@ -274,11 +361,15 @@ header {
         }
         &.v2{
             & h2{
-                font-size: 9rem;
+                font-size: 6rem;
                 font-weight: 700;
-                color: rgba(255, 255, 255, 0.1);
+                color: rgba(255, 255, 255, 1);
+                line-height: 0.98;
+                padding-left: 4.25rem;
+                padding-bottom: 1.8rem;
+                letter-spacing: 0.25rem;
                 @media (max-width:$ipadPotrait){
-                    font-size:6rem;
+                    font-size:5rem;
                 }
                 @media (max-width:$mobileLarge){
                     font-size:4rem;
@@ -1346,5 +1437,22 @@ footer {
     .ajcol { 
         width: 100%;
         float:none;
+    }
+}
+
+.fa-tiktok {
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    display: block;
+    align-items: center;
+    border-radius: 0.25rem;
+    &:before{
+        font-size: 1.25rem;
+        vertical-align: middle;
+    }
+    &.square {
+        color: $color01;
+        background: $color02;
     }
 }

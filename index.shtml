@@ -82,14 +82,13 @@
             </div>
             <div class="text-cont v2 animated" data-animation="fadeInUp" data-animation-delay="400">
                 <div class="container">
-                    <div class="col-sm-4">
-                        <h2><b>Become a</b> known Egg Donor</h2>
                     <div class="col-sm-8">
-                        <h2>Egg Donor</h2>
+                        <h2><b>Become a</b> known Egg Donor</h2>
+                        <!-- <h2>Egg Donor</h2> 
                         <div class="cont-in">
                             <p>Lorem Ipsum is simply dummy text of the  typesetting industry.</p>
                             <span class="name">- Sandra D’mellow</span>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
