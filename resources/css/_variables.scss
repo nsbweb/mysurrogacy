@@ -4,7 +4,6 @@
          url('../fonts/effra_std_lt-webfont.woff') format('woff');
     font-weight: 300;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -13,7 +12,6 @@
          url('../fonts/effra_std_rg-webfont.woff') format('woff');
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
@@ -22,16 +20,17 @@
          url('../fonts/effra_std_bd-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
 }
 
 $basefont : 16px;
+
+
 
 //colors
 $color00: #000000;
 $color01: #0D1321;
 $color02: #FFFFFF;
-$color03: #807E7E;
+$color03: #E2E2E2;
 $color04: #ABE9FF;
 $color05: #F2C94C;
 $color06: #636D83;
@@ -44,7 +43,7 @@ $color12: #B7B7B7;
 $color13: #484545;
 $color14: #0C0C0C;
 $color15:#FECE54;
-
+$color16:#c863cf;
 
 
 $gradiantColor00: linear-gradient(

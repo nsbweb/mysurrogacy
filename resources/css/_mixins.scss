@@ -44,7 +44,7 @@
         &:after { 
             content: '';
             position: absolute;
-            background: url(../images/long-arrow.svg) no-repeat left top;
+            background: url(../images/long-arrow.png) no-repeat left top;
             background-size:contain ;
             right: 0;
             top:calc(50% - 0.4rem);
@@ -105,7 +105,7 @@
 }
 
 @mixin bg-comp {
-    background: url(../images/comp-img.jpg) no-repeat center center;
+    background: url(../images/contact-us/1.jpg) no-repeat center center;
     background-color:$color02;
     background-size:auto 100%;
     background-position: left center;

@@ -1,0 +1,1205 @@
+<!-- 
+
+    <script>
+
+    $(document).ready(function(){
+
+        
+        $('.instagram-feed-container').socialfeed({
+            // INSTAGRAM
+            instagram:{
+                accounts: ['@teslamotors','#teslamotors'],  //Array: Specify a list of accounts from which to pull posts
+                limit: 2,                                    //Integer: max number of posts to load
+                client_id: 'YOUR_INSTAGRAM_CLIENT_ID',       //String: Instagram client id (optional if using access token)
+                access_token: '929115474288556|262be925f33d57ce023f91d6e094b0df' //String: Instagram access token
+            },
+
+            // GENERAL SETTINGS
+            length:400,                                      //Integer: For posts with text longer than this length, show an ellipsis.
+            template: "https://www.yellow13.in/vendors/bower_components/social-feed/template.html",                         //String: Filename used to get the post template.
+        });
+
+       
+    });
+</script>
+$('.facebook-feed-container').socialfeed({
+            // FACEBOOK
+            facebook:{
+                accounts: ['@teslamotors','!teslamotors'],  //Array: Specify a list of accounts from which to pull wall posts
+                limit: 2,                                   //Integer: max number of posts to load
+                access_token: 'YOUR_FACEBOOK_ACCESS_TOKEN'  //String: "APP_ID|APP_SECRET"
+            },
+
+            // TWITTER
+            twitter:{
+                accounts: ['@spacex'],                      //Array: Specify a list of accounts from which to pull tweets
+                limit: 2,                                   //Integer: max number of tweets to load
+                // consumer_key: 'YOUR_CONSUMER_KEY',          //String: consumer key. make sure to have your app read-only
+                // consumer_secret: 'YOUR_CONSUMER_SECRET_KEY' //String: consumer secret key. make sure to have your app read-only
+                tweet_mode: 'compatibility'                 //String: change to "extended" to show the whole tweet
+            },
+
+            // GENERAL SETTINGS
+            length:400,                                     //Integer: For posts with text longer than this length, show an ellipsis.
+            show_media:true,                                //Boolean: if false, doesn't display any post images
+            media_min_width: 300,                           //Integer: Only get posts with images larger than this value
+            date_format: "ll",                              //String: Display format of the date attribute (see http://momentjs.com/docs/#/displaying/format/)
+            date_locale: "en",                              //String: The locale of the date (see: http://momentjs.com/docs/#/i18n/changing-locale/)
+            moderation: function(content) {                 //Function: if returns false, template will have class hidden
+                return  (content.text) ? content.text.indexOf('fuck') == -1 : true;
+            },
+            callback: function() {                          //Function: This is a callback function which is evoked when all the posts are collected and displayed
+                console.log("All posts collected!");
+            }
+        }); -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="generator" content="">
+<title>About Us : My Surrogacy Journey
+</title>
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+<!-- Favicons -->
+<link rel="apple-touch-icon" href="resources/images/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="resources/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="resources/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="resources/images/favicons/manifest.json">
+<link rel="mask-icon" href="resources/images/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="resources/images/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+<script src="resources/js/modernizr-2.6.2.min.js" ></script>
+
+<!-- Bootstrap core CSS -->
+<link href="resources/css/bootstrap.min.css" rel="preload" as="style">
+<link href="resources/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom styles for this template -->
+<link href="resources/css/rtop.videoPlayer.1.0.0.min.css" rel="stylesheet">
+<link href="resources/css/plugin.css" rel="stylesheet">
+<link href="resources/css/all.min.css" rel="stylesheet">
+<link href="resources/css/magnific-popup.css" rel="stylesheet">
+
+<!-- Social-feed css -->
+<link href="https://www.yellow13.in/vendors/bower_components/social-feed/jquery.socialfeed.css" rel="stylesheet" type="text/css">
+<!-- font-awesome for social network icons -->
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<link href="resources/css/style.css" rel="stylesheet">
+<link href="resources/css/media.css" rel="stylesheet">
+
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+</head>
+
+<body>
+<!-- Header :: Start -->
+<header class="animated" data-animation="fadeInUp" data-animation-delay="300">
+
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#" rel="noopener">
+                <img src="resources/images/logo.png" alt="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+                <ul class="navbar-nav">
+                    <li class="nav-item "><a class="nav-link" aria-current="page" href="home.html">Home</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item "><a class="nav-link" href="resources.html">Resources</a></li>
+                    <li class="nav-item "><a class="nav-link" href="membership.html">Membership</a></li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownXxl" data-bs-toggle="dropdown" aria-expanded="true">Pricing</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownXxl">
+                            <li><a class="dropdown-item" href="https://www.yellow13.in/membership-pricing">Intended Parents</a></li>
+                            <li><a class="dropdown-item" href="https://www.yellow13.in/directory-pricing">Directories</a></li>
+                        </ul>
+                    </li> -->
+                    <li class="nav-item "><a class="nav-link" href="book-a-consultation.html">Book a Consultation</a></li>
+                    <li class="nav-item "><a class="nav-link" href="login.html">Sign In</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<!-- Header :: End -->
+
+
+<!-- Banner :: Start -->
+<div class="banner">
+    <div class="">
+        <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+            <img src="resources/images/banners/about_us_banner.jpg" alt="Banner-02"/>
+        </div>
+        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+            <div class="container">
+                <div class="col-sm-6">
+                    <h2>Why we created My Surrogacy Journey</h2>
+                    <p>Domestic and International Surrogacy lacks tailored and balanced support. So we decided to change it, starting with My Surrogacy Journey.</p>
+                    <a href="about-us.html#our-story" class="btn btn-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- <div class="banner">
+    <div class="owl-cara-single owl-carousel">
+        <div class="">
+            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+            </div>
+            <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                <div class="container">
+                    <div class="col-sm-4">
+                        <h2>Why we created My Surrogacy Journey</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                <img src="resources/images/banner-img.jpg" alt="Banner-01"/>
+            </div>
+            <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                <div class="container">
+                    <div class="col-sm-4">
+                        <h2>Why we created My Surrogacy Journey</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#" class="btn btn-link">Explore My Surrogacy Journey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- Banner :: End -->
+
+<!-- Main-Content :: Start -->
+<div class="main-content">
+    <!-- Our Story :: Start -->
+    <!-- <div class="section animated has-view-more" data-animation="fadeInUp" data-animation-delay="300">
+        <div class="container">
+            <div class="highlight-box">
+                <h2 class="main-tl">Our Story</h2>
+                <p>When Michael and Wes began their journey in 2014, the demand on other not-for-profit organisations meant they had to explore independent UK Surrogacy due to extensive waitlists and shortages or surrogates. </p>
+                <p class="hidden">They dived deep into the online Surrogacy communities, made a tonne of friends and contacts and began learning more about Surrogacy. The do’s and don’ts, the clinics who genuinely specialise in Surrogacy, Egg Donor wait lists, the current Law and the reform, the Parental Order process and the limited amount professional counselling available for all those on a journey. It was clear there was an opportunity to combine technology with support, and to also bring together a team of Fertility and Surrogacy experts.  Contacts that have been nurtured, to form one of the most admired Advisory Boards for a UK Surrogacy Not for Profit organisation, ensuring every member is supported equally and has a voice.</p>
+                <p class="hidden">Included are several UK firsts for a UK Surrogacy organisation such as eight hours of emotional support including professional BICA counselling throughout the entire journey, Our Partnerships are equally as important, and again have been built up based on mutual respect and similar objective to help support those on a journey to parenthood.  Our pre-conception genetic testing to New-born screening, offered from Igenomix. An extensive educational and document library covering all aspects of the journey, which goes beyond the birth, will ensure that all parties are medically, emotionally and legally informed.</p>
+                <p class="hidden">All Intended Parents also receive home Sperm Testing kits via ExSeed, the leading testing and fertility improvement kit designed to further support and help encourage men to speak up and get fit for fertility. My Surrogacy Journey has also partnered with Fenomatch, Facial Recognition software which compares over 12,000 biometric measurements to find the donor with the greatest facial resemblance to the Intended Parents, taking known egg donor matching to new levels, never seen before in the UK.</p>
+                <p class="hidden">Intended Parents also receive membership to The Donor Conception Network and will also be enrolled in tailored antenatal classes by leading birthing experts. Our own specialist e-Midwife will also help guide and support those on their journey too. The Doula Association will be working with IP’s with virtual postnatal support, answering all the important questions – right when you need it.</p>
+                <p class="hidden">To ease the pressure on fertility clinics, we have partnered with EngagedMD, a consent platform ensuring complex HFEA consents are captured as part of the membership process with My Surrogacy Journey – allowing clinics to concentrate more on patient care, thus being more efficient.</p>
+                <p class="hidden">We have even partnered with The Mindful Birthing Group to offer Surrogates and Intended Parents a birthing support package which includes on online support programme as well as a virtual birthing session.</p>
+                <p class="hidden"><b>You see – we’ve thought of everything.</b></p>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn-loadmore btn-view-more">Load More</a>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="section" id="our-story">
+            <div class="container">
+                <div class="highlight-box">
+                    <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Our Story</h2>
+                    <p class=" animated" data-animation="fadeInUp" data-animation-delay="400"> </p>
+                </div>
+                <ul class="def-style count-one">
+                    <li class="animated" data-animation="fadeInUp" data-animation-delay="300">
+                        <div class="infoBox has-view-more">
+                            <div class="row infoInnerBox">
+                                <div class="col-sm-3">
+                                    <img src="resources/images/our_story/family-of-mike-wes.JPG" style="width:100%" />
+                                </div>
+                                <div class="col-sm-9">
+                                    <p>When Michael and Wes began their journey in 2014, the demand on other not-for-profit organisations meant they had to explore independent UK Surrogacy due to extensive waitlists and shortages or surrogates. </p>
+                                    <p>They dived deep into the online Surrogacy communities, made a tonne of friends and contacts and began learning more about Surrogacy. The do’s and don’ts, the clinics who genuinely specialise in Surrogacy, Egg Donor wait lists, the current Law and the reform, the Parental Order process and the limited amount professional counselling available for all those on a journey. It was clear there was an opportunity to combine technology with support, and to also bring together a team of Fertility and Surrogacy experts.  Contacts that have been nurtured, to form one of the most admired Advisory Boards for a UK Surrogacy Not for Profit organisation, ensuring every member is supported equally and has a voice.</p>
+                                </div>
+                            </div>
+
+                            <div class="row infoInnerBox hidden">
+                                <div class="col-sm-9">
+                                    <p>Included are several UK firsts for a UK Surrogacy organisation such as eight hours of emotional support including professional BICA counselling throughout the entire journey, Our Partnerships are equally as important, and again have been built up based on mutual respect and similar objective to help support those on a journey to parenthood.  Our pre-conception genetic testing to New-born screening, offered from Igenomix. An extensive educational and document library covering all aspects of the journey, which goes beyond the birth, will ensure that all parties are medically, emotionally and legally informed.</p>
+                                    <p>All Intended Parents also receive home Sperm Testing kits via ExSeed, the leading testing and fertility improvement kit designed to further support and help encourage men to speak up and get fit for fertility. My Surrogacy Journey has also partnered with Fenomatch, Facial Recognition software which compares over 12,000 biometric measurements to find the donor with the greatest facial resemblance to the Intended Parents, taking known egg donor matching to new levels, never seen before in the UK.</p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <img src="resources/images/our_story/crgh.jpg" style="width:100%" />
+                                </div>
+                            </div>
+                            <div class="row infoInnerBox hidden">
+                                <div class="col-sm-3">
+                                    <img src="resources/images/our_story/family.JPG" style="width:100%" />
+                                </div>
+                                <div class="col-sm-9">
+                                    <p>Intended Parents also receive membership to The Donor Conception Network and will also be enrolled in tailored antenatal classes by leading birthing experts. Our own specialist e-Midwife will also help guide and support those on their journey too. The Doula Association will be working with IP’s with virtual postnatal support, answering all the important questions – right when you need it.</p>
+                                    <p>To ease the pressure on fertility clinics, we have partnered with EngagedMD, a consent platform ensuring complex HFEA consents are captured as part of the membership process with My Surrogacy Journey – allowing clinics to concentrate more on patient care, thus being more efficient.</p>
+                                </div>
+                            </div>
+                            <div class="row infoInnerBox hidden">
+                                <div class="col-sm-9">
+                                    <p>We have even partnered with The Mindful Birthing Group to offer Surrogates and Intended Parents a birthing support package which includes on online support programme as well as a virtual birthing session.</p>
+                                    <p class="txt-center"><b class="btn-loadmore">You see – we’ve thought of everything.</b></p>
+                                </div>
+                                <div class="col-sm-3">
+                                    <img src="resources/images/our_story/mike-and-wes.JPG" style="width:100%" />
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-loadmore btn-view-more">Load More</a>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- <li class="animated" data-animation="fadeInUp" data-animation-delay="400">
+                        <div class="infoBox">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever  </p>
+                        </div>
+                    </li>
+                    <li class="animated" data-animation="fadeInUp" data-animation-delay="500">
+                        <div class="infoBox">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    <!-- Our Story :: End -->
+
+    <!-- Our Values :: Start -->
+        <div class="section animated" data-animation="fadeInUp" data-animation-delay="300">
+            <div class="container">                
+                <div class="highlight-box">
+                    <h2 class="main-tl">Our Values</h2>
+                </div>
+                <div class="slider owl-cara owl-carousel center-big up-in">
+                    <div class="">
+                        <figure class="img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                            <img src="resources/images/values/value5-min.png" alt="">
+                            <!-- <figcaption>Balanced</figcaption> -->
+                        </figure>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">                        
+                            <p>By making all our members equal we ensure that every relationship is balanced - neither party should feel more in control.  Everyone is on this journey together.</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <figure class="img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                            <img src="resources/images/values/value6-min.png" alt="">
+                            <!-- <figcaption>Inclusive</figcaption> -->
+                        </figure>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">                        
+                            <p>MSJ has been designed to support and guide the individual needs of anyone wanting to build a family.  Our memberships are tailored to same sex, heterosexual, solo and LGBTQ intended parents</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <figure class="img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                            <img src="resources/images/values/value1-min.png" alt="">
+                            <!-- <figcaption>Educational</figcaption> -->
+                        </figure>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">                        
+                            <p>A successful and responsible surrogacy journey relies on everyone involved being emotionally, legally, and medically informed.  We are committed to ensuring that all parties are educated about every single step in the process.</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <figure class="img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                            <img src="resources/images/values/value2-min.png" alt="">
+                            <!-- <figcaption>Choice</figcaption> -->
+                        </figure>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">                        
+                            <p>MSJ will provide you with all the necessary information and range of options open to you so that you can make the right decision for you based on your personal needs.</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <figure class="img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                            <img src="resources/images/values/value3-min.png" alt="">
+                            <!-- <figcaption>Trusted</figcaption> -->
+                        </figure>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">                        
+                            <p>MSJ has been created by people who have been intended parents, surrogates and known egg donors.  We have poured our experience, the highs and the lows, into designing a trusted home for anyone wanting to build a family through surrogacy.  And will only work with trusted experts in surrogacy.  We advocate for surrogacy agreements which are built on trust, respect, friendship and partnership.  Basically, it is ALL about TRUST. </p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <figure class="img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                            <img src="resources/images/values/value4-min.png" alt="">
+                            <!-- <figcaption>Transparent</figcaption> -->
+                        </figure>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">                        
+                            <p>We insist that all parties involved in MSJ agree to full transparency and will always provide updates when requested.  No one should never feel left in the dark or as if they can’t ask a question.</p>
+                        </div>
+                    </div>
+                    <div class="">
+                        <figure class="img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                            <img src="resources/images/values/value7-min.png" alt="">
+                            <!-- <figcaption>Innovative</figcaption> -->
+                        </figure>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="400">                        
+                            <p>he world of fertility technology is changing rapidly.  We have partnered with providers in some of the latest technology so that our members can benefit from recent innovations.  The way the world communicates has already changed beyond recognition in one year.  We have built a platform that harnesses this change to maximise our members’ ability to communicate. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Our values :: End -->
+
+    <!-- Our Misson :: Start -->
+    <div class="section animated has-view-more" data-animation="fadeInUp" data-animation-delay="300">
+        <div class="container">
+            <div class="highlight-box">
+                <h2 class="main-tl">Our Mission</h2>
+                <p><b class="btn-loadmore">It’s all about our Members.</b> </p>
+                <p>Our commitment is to ensure we define a parental pathway through Surrogacy that is trusted, professional and supported every step of the way. The unrivalled levels of counselling and practical support from a network of surrogacy professionals and experts, medics and clinicians, combined with some of the latest technology platforms in the Fertility industry, is a first in the world of surrogacy.  </p>
+                <p><b class="btn-loadmore">We’ve considered everything. This is your journey.</b></p>
+            </div>
+            <div class="text-center">
+                <!-- <a href="#" class="btn btn-loadmore btn-view-more">Load More</a> -->
+            </div>
+        </div>
+    </div>
+    <!-- Our Misson :: End -->
+
+    <!-- Our Team :: Start -->
+        <div class="section shade-womb shade-bg">
+            <div class="container">
+                <div class="highlight-box">
+                    <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Our Team</h2>
+                    <p class=" animated" data-animation="fadeInUp" data-animation-delay="400">Meet some of the faces responsible for ensuring you have a supported journey to parenthood.  We’re looking forward to meeting you.</p>
+                </div>
+                <div class="slider animated owl-cara owl-carousel theme-02" data-animation="fadeInUp" data-animation-delay="400">
+                    <div class="slide">
+                        <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                            <img src="resources/images/team/Wes.jpg" alt="">
+                        </div>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                            <h3>Wes Johnson-Ellis</h3>
+                            <p>(Founder & LGBTQ IP Coordinator) </p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                            <img src="resources/images/team/Fran.png" alt="">
+                        </div>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                            <h3>Francesca Steyn</h3>
+                            <p>(Founder & Fertility Nurse Specialist & Clinical Lead)</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                            <img src="resources/images/team/Anna.png" alt="">
+                        </div>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                            <h3>Anna Buxton</h3>
+                            <p>(Hetero IP and International Surrogacy Coordinator)</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                            <img src="resources/images/team/Kelly.jpeg" alt="">
+                        </div>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                            <h3>Kellie Lombard</h3>
+                            <p>(Membership Sales UK and Europe)</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                            <img src="resources/images/team/Gina.jpeg" alt="">
+                        </div>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                            <h3>Gina Kinson</h3>
+                            <p>(Surrogate Coordinator) </p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                            <img src="resources/images/team/Tracey.JPG" alt="">
+                        </div>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                            <h3>Tracey Sainsbury</h3>
+                            <p>(Senior Fertility Counsellor)</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                            <img src="resources/images/team/John.jpeg" alt="">
+                        </div>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                            <h3>John Lippitt</h3>
+                            <p>(Senior Fertility Counsellor)</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                            <img src="resources/images/team/Kelly-Bio-Pic.jpg" alt="">
+                        </div>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                            <h3>Kellie DaSilva</h3>
+                            <p>(Fertility Mentor)</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                            <img src="resources/images/team/Mike.jpg" alt="">
+                        </div>
+                        <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                            <h3>Michael Johnson-Ellis</h3>
+                            <p>(Founder & Business Development and Marketing Director)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Our Team :: End -->
+
+    <!-- Our Stories :: Start -->
+    <!-- advisory_board -->
+        <div class="section shade-bg Our-Stories shade-womb womb-left-50">
+            <div class="container">
+                <div class="highlight-box">
+                    <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Advisory Board</h2>
+                </div>
+                <div class="owl-cara-single owl-carousel animated" data-animation="fadeInUp" data-animation-delay="300">
+
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Spearman.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Andrew Spearman</h4>
+                                <p>Head of Family Law, Laytons LLP</p>
+                                <p>Andrew is a specialist Fertility and Surrogacy lawyer at Laytons LLP and a recognised leader in the field of legal parenthood for the UK and LGBT+ Families.  He undertakes extensive work with clients to help them navigate the legal complexities to becoming a parent and is frequently in the High Court advancing case law for the best interests of the child, intended parents and surrogate alike. </p>
+                                <p>Andrew is best known for his work particularly with LGBT+ parents and is a prominent advocate for their rights and equal treatment, recently being in the Court of Appeal and Supreme Court on issues of transgender parenthood.  He is regularly seen at events providing information seminars to IPs and other fertility professionals to share knowledge and he is involved with surrogacy charities to support the community.</p>
+                                <!-- <a href="#" class="btn btn-loadmore btn-view-more">Load More</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Buxton.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Anna Buxton</h4>
+                                <p>International Intended parent</p>
+                                <p>Anna’s journey to motherhood was far more complicated and painful that she had ever realised was possible.</p>
+                                <p>Two missed miscarriages and subsequent surgeries to remove the pregnancies left Anna with severe scarring of the womb - a condition known as Asherman’s Syndrome - so the lining necessary to maintain a pregnancy couldn’t develop. Five operations over 18 months failed to correct the scarring and Anna was told that she would never be able to carry a pregnancy. </p>
+                                <p>Anna and Ed therefore turned to surrogacy and began researching the options at home and abroad. Awfully long waiting times to be matched with a surrogate, meant that Anna and Ed decided to go abroad, and Isla was conceived and born in India. For their sibling journey, they decided to go to America and the twins were born in the summer of 2018.</p>
+                                <p class="hidden">Both journeys highlighted to Anna the complexities of international surrogacy and the challenges of trying to manage those journeys unassisted. Anna decided not to return to her job in financial services after her children were born so that she could support other people on their journey to parenthood through surrogacy</p>
+                                <p class="hidden">Anna has worked with the San Diego Fertility Center where her twins were born to help couples navigate surrogacy in the US and now works for My Surrogacy Journey.</p>
+                                <a href="#" class="btn btn-loadmore btn-view-more">Load More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Gilling-Smith.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Carol Gilling-Smith MA (Cantab), FRCOG, PhD</h4>
+                                <p>Medical Director & CEO, The Agora Clinic</p>
+                                <p>Carole is the CEO, Medical Director and founder of the Agora Clinic in Hove, the largest Fertility Clinic in Sussex offering both NHS and privately funded treatment. She is a Consultant Gynaecologist with particular expertise in Fertility and Reproductive Medicine. She graduated in Medicine from Cambridge in 1984 and completed a PhD thesis during her specialist training. She has a diverse research portfolio and continues to publish and lecture nationally and internationally on a wide range of fertility related topics. She pioneered the first fertility program for patients in the UK living with HIV and remains an international expert in this field.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Steyn.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Francesca Steyn</h4>
+                                <p>Co-founder & Fertility Nurse Specialist RGN</p>
+                                <p>Francesca is one of the UK’s leading Fertility nurse specialists with over 15 years of experience and has a special interest in Surrogacy and gamete donation. Francesca’s enthusiasm for Fertility Nursing has taken her all over the globe, presenting at national and international conferences and sharing best practices whilst educating like-minded Nurses about the importance of Fertility Nursing, training and development for fertility nurses and sharing her experience of managing surrogacy programmes. Francesca has worked for some of London’s leading Fertility Clinics and established Surrogacy teams which have since developed into award winning services. She was awarded surrogacy fertility professional of the year in both 2018 and 2019 and has been heavily involved in the campaigning for change for surrogacy, writing national guidelines and contributed to the UK Surrogacy Law Reform which was led by All Party Parliamentary Group for surrogacy (APPG). Francesca has recently been appointed as Chair elect for the Royal College of Nursing Fertility Nurses Forum which is a major fertility stakeholder group and the leading voice for fertility nursing staff in the UK . Francesca also has personal experience as an egg donor, in 2018 she donated her eggs to friends and now colleagues, Michael and Wes which resulted in the birth of Duke in 2019.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Kinson.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Gina Kinson</h4>
+                                <p>Hope Surrogacy</p>
+                                <p>I'm married to Ian and have 3 children Ellie 24, Alex 19 and Samuel 14. I live in a beautiful part of Kent called the Weald which is just south east of London. I work for the NHS in Rapid Response which is an emergency nursing team that treat people in the community and keep them out of hospital. 6 years ago a friend of mine wrote a book about his Journey to become a parent and I was so touched by how incredible the whole process was that I took my first steps into Surrogacy. </p>
+                                <p>I have since carried 2 little girls for a wonderful couple, been part of the consultations for Surrogacy Law changes and won an award for raising Awareness about Surrogacy. </p>
+                                <p>I currently help run a Support Group for IPS and Surrogates living in the UK providing information, help and advice for those going through a Journey. </p>
+                                <p class="hidden">I am passionate about making sure that everyone involved in surrogacy is armed with the knowledge, understanding and respect needed to complete and support a successful journey. </p>
+                                <a href="#" class="btn btn-loadmore btn-view-more">Load More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Smith.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Hilary Smith</h4>
+                                <p>International Client Relations, UK & Europe Extraordinary Conceptions Surrogacy & Egg Donation</p>
+                                <p>Hilary is the International Client Relations Consultant for Extraordinary Conceptions Surrogacy & Egg Donation Agency. Based out of the UK, part of Hilary's role is to support, educate and guide intended parents from across Europe through the surrogacy and egg donation process in North America, as well as to develop and grow more accessible options internationally. Hilary has over 15 years of nursing experience with almost a decade in reproductive health and infertility. Her passion for this very specific area of fertility began almost a decade ago when she worked as a Surrogacy and Donor Nurse Coordinator at a busy clinic in Toronto, Canada. Hilary managed all aspects of the IVF cycle for her patients and assisted international intended parents, surrogates and their egg donors through the entire process. Over the years, her role on the international team allowed her to travel to several different countries to help educate intended parents worldwide on their family building options through surrogacy and egg donation. </p>
+                                <p class="hidden">Hilary's passion to assist more intended parents inspired her to relocate to the United Kingdom where she has continued her work to help create more accessible programs for the many intended parents around the world who require a surrogate or donor to have a child.</p>
+                                <a href="#" class="btn btn-loadmore btn-view-more">Load More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Lawford-Davies.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>James Lawford Davies</h4>
+                                <p>Partner, Hill Dickinson LLP, Quality Compliance</p>
+                                <p>James is a specialist life sciences regulatory lawyer and litigator. He has a particular specialism in the regulation of assisted reproduction and embryo research.  He advises a large number of clinics, hospitals, universities and research centres licensed by the Human Fertilisation and Embryology Authority (HFEA), the Human Tissue Authority (HTA) and the Care Quality Commission (CQC).  He also advises pharmaceutical and medical device companies regulated by the Medicines and Healthcare products Regulatory Agency (MHRA). </p>
+                                <p>James has been involved in most of the leading cases relating to IVF, embryo research, genetics and stem cell research.</p>
+                                <!-- <a href="#" class="btn btn-loadmore btn-view-more">Load More</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Lippitt.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>John Lippitt</h4>
+                                <p>Senior Fertility Counsellor BICA Member</p>
+                                <p>John qualified as a counsellor in 2003 and has worked at the Hewitt Fertility Centre in Liverpool since 2011. As well as offering therapeutic and implications counselling to individual patients and couples, he is responsible for managing the clinic's patient support group; he has also been a guest speaker at local and national fertility training events. John is a member of the British Infertility Counselling Association and a registered member of the British Association for Counselling and Psychotherapy. Alongside his work in the fertility field he holds a counselling post at Alder Hey Children's Hospital.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-DaSilva.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Kelly Da Silva</h4>
+                                <p>The Dovecote Organisation</p>
+                                <p>Kelly Da Silva is a Fertility Support Expert, Writer, Speaker, and Founder of The Dovecote: Childless Support Organisation. Inspired by her own personal experience of infertility, Kelly specialises in developing and delivering ‘Emotional Support’ for those experiencing infertility either during treatment or in their own childless journey.</p>
+                                <p>Working with a leading UK Fertility Provider, Kelly has developed and continues to deliver a range of emotional and support offerings to improve the ‘Patient Experience’ to a level recognised by the HFEA as a ‘Gold Standard for Support’, using the knowledge, strategies, research and tools attested through her own personal journey. Kelly also shares best practice at conferences, speaks at events and provides consultancy and training to other fertility clinics and professionals and has worked with the Royal College of Nursing to write clinical guidance on patient support.</p>
+                                <p class="hidden">As Founder of The Dovecote: Childless Support Organisation, Kelly’s passion has also driven her to offer a range of support to those navigating their own childless journey including a global online community where people can connect with others dealing with the challenges of infertility and childlessness, mentoring, 1-2-1 support and online workshops. She also helps to raise awareness of the challenges of fertility and childlessness by being a leading voice in this area and often speaking in the media and at events about this topic</p>
+                                <a href="#" class="btn btn-loadmore btn-view-more">Load More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Horsey.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Dr Kirsty Horsey</h4>
+                                <p>Director of Education, Reader in Law, Kent Law School, University of Kent</p>
+                                <p>Kirsty Horsey is a Reader in Law at Kent Law School, University of Kent. She has been interested in and actively researching surrogacy law – and advocating its reform – for over 20 years. She has written numerous book chapters and articles on surrogacy in the UK, including publications in both academic and public-facing journals</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Miles.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Lyndon Miles</h4>
+                                <p>BSc, MSc, Dip Clin Embryol, DipRCPath – Consultant Embryologist</p>
+                                <p>Director & Consultant, Embryologist at Center of Reproduction and Gynaecology Wales & West</p>
+                                <p>Lyndon has worked in this field for over 25 years. He has extensive experience from working in six IVF clinics, including six years as Senior Embryologist and Harvard Instructor at Brigham & Women’s Hospital, Harvard Medical School, Boston, USA. He is currently the director of the Centre for Reproduction and Gynaecology Wales & West (CRGW) a group of fertility 4 clinics in Wales and England.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Barnsley.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Nina Barnsley</h4>
+                                <p>Director of Donor Conception Network</p>
+                                <p>Nina has been a Director at Donor Conception Network since 2014. Donor Conception Network is a charity offering support and information to anyone considering donor conception (with or without surrogacy) as well as parents of children conceived this way and donor conceived children and young people.  They  do this through membership, a website, publications, workshops, the DCN Journal and telephone and email helplines. The organisation is parent-led and child-focussed, helping people with the social and emotional aspects of creating or expanding a family through donor conception</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Vaughn.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Richard B. Vaughn, Esq.</h4>
+                                <p>Founder, International Fertility Law Group Inc.</p>
+                                <p>Fertility law attorney Rich Vaughn combined his passion for family formation with over 20 years of experience in business and technology law and founded International Fertility Law Group (IFLG), one of the most successful and best-known law firms in the world focusing on assisted reproductive technology law.</p>
+                                <p>Rich Vaughn first studied reproductive and fertility law at Loyola University Chicago School of Law in the early 1990s. In 1993, Rich began providing litigation, contract, technology, marketing and corporate legal services to individual clients, companies and municipalities in Chicago and Los Angeles. During his own experience of becoming a parent via egg donation and surrogacy, Rich discovered a renewed passion for fertility law and launched IFLG, which focuses exclusively on assisted reproductive technology legal services. Since then he’s had the opportunity to help thousands of intended parents from all over the world create families via assisted reproduction.</p>
+                                <p class="hidden">In addition to his busy legal practice, Rich devotes numerous volunteer hours to advancing the field of ART law and is a dedicated advocate for LGBT intended parents and families. He is immediate past chair of the American Bar Association (ABA) Family Law Section Committee on Assisted Reproductive Technology, which played a leading role in developing model legislation to assist states in regulating assisted reproductive technology medical providers and donor and surrogacy agencies. He is a founder of and speaker at the first Cambridge University International Surrogacy Symposium held in June 2019. He served on the National Board of Path2Parenthood (formerly American Fertility Association) and is an active member of the California Bar Association (CBA) and its Family Law Section, the American Society for Reproductive Medicine (ASRM) Legal Professionals Group, and the National LGBT Bar Association. He has been published in numerous professional journals, including the American Bar Association’s SciTech Lawyer, for which he also served as issue editor, International Family Law Journal, Family Law Review, American Journal of Fertility Law and the Australian Family Law Journal; he has presented at numerous legal and family-building conferences around the U.S., including Yale University School of Law and California Western School of Law; and he has been cited as a fertility law expert in numerous reports, including The Washington Post, CNN, National Public Radio (NPR), Parenting Magazine Live, and The ABA Journal, to name a few. Away from the office, Rich is a proud advocate for LGBT equality and gay and lesbian parenting as a member and supporter of the Family Equality Council and provides community service in the medical, health and wellness industries. He is also an experienced fitness instructor, triathlete, a former paramedic, and board member of a medical device company. In 2008, Rich and his spouse, Tommy Woelfel, were married in California and became the proud parents, through egg donation and surrogacy, of twin sons Aiden and Austin</p>
+                                <a href="#" class="btn btn-loadmore btn-view-more">Load More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">                            
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Martin.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Sophie Martin</h4>
+                                <p>Registered Midwife and The infertile Midwife</p>
+                                <p>Sophie Martin is a Registered Midwife and has worked in a Central London hospital for the past eight years. One of her special interests is antenatal education, and she regularly teaches on antenatal courses. She has written for the Royal College of Midwives Magazine, alongside blog posts, and appearing on Radio and podcasts.</p>
+                                <p>She is enthusiastic about supporting families through non-traditional routes to parenthood, including surrogacy.</p>
+                                <p>Sophie has personal experience of fertility treatment, having undergone 6 rounds of IVF herself.</p>
+                                <a href="#" class="btn btn-loadmore btn-view-more">Load More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="row d-sm-flex">
+                            <div class="col-sm-4 img-cont animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <img src="resources/images/advisory_board/MSJ-Advisory-Board-Sainsbury.jpg" alt="">
+                            </div>
+                            <div class="col-sm-8 text-cont animated has-view-more" data-animation="fadeInUp" data-animation-delay="400">
+                                <h4>Tracey Sainsbury</h4>
+                                <p>Senior Fertility Counsellor, BICA Accredited</p>
+                                <p>Tracey Sainsbury is a specialist fertility counsellor providing support to individuals and couples; with over 20 years’ experience of providing fertility support, she is an Accredited member of both the British Infertility Counselling Association and the National Fertility Society. Tracey is also a member of the Advisory Panel for Fertility Network UK and served a three-year tenure with the BICA Executive Committee, promoting best practice in counselling provision and patient care.</p>
+                                <p>Tracey has a keen interest in Interpersonal Neurobiology, including Epigenetics, which reinforces the importance of pregnancy around pre-birth attachment and familial attunement; promoting the importance of being comfy in your surrogacy team before conception. Our unconscious makes the highs higher and lows lower, which without support can leave us feeling isolated and / or overwhelmed; Tracey believes that fertility counselling throughout the pathway to parenthood and beyond promotes self-compassion and enhanced communication in relationships, especially between IP and Surrogates, and often known donors too, in addition to our personal relationships with partners and family.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- Our Stories :: End -->
+
+    <!-- Our Team :: Start -->
+    <div class="section shade-womb shade-bg">
+        <div class="container">
+            <div class="highlight-box">
+                <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Our Partners</h2>
+                <p class=" animated" data-animation="fadeInUp" data-animation-delay="400">Our Partnerships are an essential component of our Membership. Built on trust and transparency, we have carefully and sensitively created benefits which are as individual as our members personal fertility journey. From Genetic screening to new-born testing all the way through to birth preparation and doula support. We want to ensure this is a journey enjoyed by everyone, with services provided by those that authentically care.</p>
+            </div>
+ 
+            <div class="slider animated owl-cara owl-carousel theme-02" data-animation="fadeInUp" data-animation-delay="400">
+                <div class="slide">
+                    <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                        <img src="resources/images/partners/MSJ-Partner-doula.jpg" alt="">
+                    </div>
+                    <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                        <h3>The Doula Association</h3>
+                        <p>Supporting Intended Parents, post Birth giving you the confidence and guidance as a new parent. Helping Surrogates from a post birth recovery and wellbeing perspective</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                        <img src="resources/images/partners/MSJ-Partner-engagedmd.jpg" alt="">
+                    </div>
+                    <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                        <h3>EngagedMD</h3>
+                        <p>Managing elements of your treatment consents designed to make everything easier, and seamless for all members and possibly clinics</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                        <img src="resources/images/partners/MSJ-Partner-exseed.jpg" alt="">
+                    </div>
+                    <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                        <h3>ExSeed</h3>
+                        <p>Providing Members with Home Sperm Test Kits, to help you understand your fertility and get fit for treatment</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                        <img src="resources/images/partners/MSJ-Partner-fenomatch.jpg" alt="">
+                    </div>
+                    <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                        <h3>Fenomatch</h3>
+                        <p>Fertility Tech at its finest. Scanning 12,000 facial points matching you with a Donor with the most likeness to one of the Intended Parents.</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                        <img src="resources/images/partners/MSJ-Partner-igenomix.jpg" alt="">
+                    </div>
+                    <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                        <h3>Igenomix</h3>
+                        <p>Providing genetic screening from conception, including carrier testing as standard, all the way through to pregnancy screening and newborn genetic testing</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                        <img src="resources/images/partners/MSJ-Partner-mbg.jpg" alt="">
+                    </div>
+                    <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                        <h3>The Mindful Birth® Group</h3>
+                        <p>Supporting Intended Parents and Surrogates virtually during the birthing process</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                        <img src="resources/images/partners/MSJ-Partner-mfa.jpg" alt="">
+                    </div>
+                    <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                        <h3>Mini First aid</h3>
+                        <p>Providing baby and child first aid courses to give new parents all the tools they need to protect their child, in the event of an emergency</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="img-cont animated" data-animation="fadeInUp" data-animation-delay="400">
+                        <img src="resources/images/partners/MSJ-Partner-dcn.jpg" alt="">
+                    </div>
+                    <div class="text-cont animated" data-animation="fadeInUp" data-animation-delay="500">
+                        <h3>Donor Conception Network</h3>
+                        <p>A supportive network of mainly UK based families with children conceived with donated sperm, eggs or embryos, those considering or undergoing donor conception procedures, and donor conceived people.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Team :: End -->
+
+    <!-- Join Us to ease your surrogacy :: Start -->
+        <div class="section">
+            <div class="container d-sm-flex animated" data-animation="fadeInUp" data-animation-delay="300">
+                <div class="join-txt d-sm-flex justify-content-between align-item-center">
+                    <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Change is happening</h2>
+                    <a href="book-a-consultation.html" class="btn btn-link animated" data-animation="fadeInUp" data-animation-delay="400"><span>Register Now</span></a>
+                </div>
+            </div>
+        </div>
+    <!-- Join Us to ease your surrogacy :: End -->
+
+    <!-- Social Feed :: Start -->
+    <!-- <div class="section">
+        <div class="container">
+            <div class="highlight-box">
+                <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Press Releases</h2>
+                <p class="animated" data-animation="fadeInUp" data-animation-delay="400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="facebook-feed-container"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="instagram-feed-container"></div>
+                </div>
+                <div class="col-md-4">
+                    <div class="twitter-feed-container"></div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Social Feed :: End -->
+
+    <!-- Press Releases :: Start -->
+    <!-- <div class="section">
+        <div class="container">
+            <div class="highlight-box">
+                <h2 class="main-tl animated" data-animation="fadeInUp" data-animation-delay="300">Social Updates</h2>
+                <p class="animated" data-animation="fadeInUp" data-animation-delay="400">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
+            </div>
+            <div class="slider theme-03 owl-cara owl-carousel">
+                <div class="slide animated" data-animation="fadeInUp" data-animation-delay="300">
+                    <div class="img-cont">
+                        <img src="resources/images/modern-familly-img-01.jpg" alt="The Morden Family Show"/>
+                    </div>
+                    <div class="text-cont">
+                        <h6 class="location-name">Manchester</h6>
+                        <h4>The Morden Family Show</h4>
+                        <h5>12-11-2020   1pm to 5pm</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
+                    </div>
+                </div>
+                
+                <div class="slide animated" data-animation="fadeInUp" data-animation-delay="400">
+                    <div class="img-cont">
+                        <img src="resources/images/modern-familly-img-01.jpg" alt="The Morden Family Show"/>
+                    </div>
+                    <div class="text-cont">
+                        <h6 class="location-name">Manchester</h6>
+                        <h4>The Morden Family Show</h4>
+                        <h5>12-11-2020   1pm to 5pm</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
+                    </div>
+                </div>
+                
+                <div class="slide animated" data-animation="fadeInUp" data-animation-delay="500">
+                    <div class="img-cont">
+                        <img src="resources/images/modern-familly-img-01.jpg" alt="The Morden Family Show"/>
+                    </div>
+                    <div class="text-cont">
+                        <h6 class="location-name">Manchester</h6>
+                        <h4>The Morden Family Show</h4>
+                        <h5>12-11-2020   1pm to 5pm</h5>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Press Releases :: End -->
+    
+</div>
+<!-- Main-Content :: End -->
+
+<!-- Footer :: Starts -->
+<footer style="background:#332E3A">
+    <div class="container">
+    <div class="row">
+        <!-- <div class="col-sm-4 animated" data-animation="fadeInUp" data-animation-delay="300">
+            <img src="resources/images/logo-white.png" alt="logo" style="width:300px">
+            s
+        </div>
+        <div class="col">
+            <ul class="animated" data-animation="fadeInUp" data-animation-delay="300">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="animated" data-animation="fadeInUp" data-animation-delay="300">
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="#">T&amp;Cs</a></lis>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Community</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <div class="newsletter-sec animated" data-animation="fadeInUp" data-animation-delay="300">
+                <h4 class="animated" data-animation="fadeInUp" data-animation-delay="300">Follow the journey</h4>
+                <form class="form-inline d-flex animated" data-animation="fadeInUp" data-animation-delay="300">
+                    <input type="text" class="form-control" placeholder="Your Email" value=""/>
+                    <button type="submit" class="btn btn-black" >Subscribe</button>
+                </form>
+                <ul class="animated social-list" data-animation="fadeInUp" data-animation-delay="300">
+                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-snapchat-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
+                </ul>
+                <ul class="animated app-list" data-animation="fadeInUp" data-animation-delay="300">
+                    <li><a href="#"><img src="resources/images/app-store.png" alt="App Store"></a></li>
+                    <li><a href="#"><img src="resources/images/play-store.png" alt="Google Play Store"></a></li>
+                </ul>
+            </div>
+        </div> -->
+
+        <div class="col-sm-4">
+            <img src="resources/images/logo-white.png" alt="logo" style="width:300px">
+            <!-- <a href="#">
+                <svg width="246" height="149" viewBox="0 0 246 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M242.741 99.3491C239.096 90.9581 233.11 87.4051 228.733 85.9012C226.472 85.1224 220.433 83.2145 215.76 81.7495L212.7 80.7955C212.573 80.7517 212.441 80.703 212.299 80.6592C211.775 80.4938 211.119 80.1969 210.972 79.7296C210.84 79.3013 211.09 78.6053 211.666 77.8217C212.323 77.1257 213.186 76.2934 214.244 75.3346C214.56 75.0474 214.858 74.77 215.089 74.5364C221.732 68.798 225.712 63.7995 227.61 58.8107C229.201 54.6249 229.366 50.5025 228.152 45.0221C227.624 42.642 226.354 40.1647 225.003 37.5413C222.624 32.9175 220.164 28.138 221.675 23.5726C224.555 14.8702 218.049 9.67694 214.806 7.70575C213.777 5.13103 211.685 3.05763 208.876 1.84571C205.401 0.346635 201.067 0.181153 195.997 1.36387C189.501 2.88241 184.94 6.5571 182.433 12.2955C178.335 21.6744 181.097 33.9493 183.491 38.4417C183.793 39.0112 184.392 39.3178 185.02 39.2205C185.643 39.1231 186.13 38.6461 186.257 38.0085C186.923 34.6502 189.288 26.6486 196.842 24.9013C210.51 21.7377 213.592 19.7908 214.867 16.1016C215.16 18.1798 215.198 20.6475 214.655 23.3682C213.72 28.0504 214.556 30.7808 215.051 32.4113C215.16 32.7618 215.287 33.1852 215.306 33.3799C215.075 33.5016 214.504 33.4383 214.074 33.3848C213.182 33.2825 212.068 33.1511 211.336 34.037C211.114 34.3046 210.765 35.0737 209.622 37.7895C209.405 38.3006 209.164 38.8846 209.112 38.982C209.051 39.1036 208.985 39.2448 208.909 39.4005C208.574 40.1209 208.012 41.3231 207.271 41.4399C206.147 41.6199 204.858 40.8266 203.499 39.9846C201.785 38.9236 199.845 37.7262 197.748 38.3444C194.958 39.1718 192.683 42.9876 193.953 48.4388C194.854 52.2984 199.339 55.3015 203.678 58.2071C207.465 60.7429 211.383 63.3663 212.096 66.1308C212.318 66.9972 212.384 67.9317 212.299 68.91C212.072 70.2144 211.265 72.9254 208.385 76.6439C208.055 77.0576 207.677 77.5005 207.285 77.9239L207.233 77.9774C205.524 79.8318 203.758 81.7543 204.245 83.414C204.476 84.1977 205.132 84.7184 206.204 84.9715C206.53 85.0494 206.988 85.0932 207.62 85.1516C210.873 85.4534 218.488 86.164 223.455 93.5377C228.549 101.641 228.634 116.871 200.114 143.426L198.438 144.983H217.719C221.444 139.415 224.366 134.368 226.623 129.803H233.322C231.047 137.347 228.327 143.333 227.553 144.983H241.881L242.051 144.317C247.037 124.906 247.273 109.774 242.741 99.3491ZM225.815 89.3373C232.269 92.3452 235.305 97.9084 236.311 104.391H233.421C232.921 92.9536 225.815 89.3373 225.815 89.3373ZM234.72 124.668H228.974C231.807 117.932 233.081 112.383 233.383 107.847H236.665C236.938 113.318 236.051 119.207 234.72 124.668Z" fill="url(#paint0_linear)"/>
+                <path d="M24.4946 142.854L25.5123 142.577C26.4397 142.39 27.2707 141.926 28.0114 141.282C28.7039 140.59 29.1194 139.614 29.2158 138.596V109.95H35.2799V138.139C35.2799 140.963 34.214 143.552 32.2689 145.546C30.7875 146.937 28.6136 148.093 26.5782 148.557L25.3256 148.882L24.4946 142.854Z" fill="url(#paint1_linear)"/>
+                <path d="M40.0674 137.482C37.9838 135.308 36.8276 132.484 36.8276 129.611C36.8276 126.697 37.9838 123.873 40.0674 121.741C42.1991 119.705 44.9753 118.549 47.9381 118.549C50.9912 118.549 53.7733 119.705 55.7606 121.741C57.8924 123.873 59.0486 126.649 59.0486 129.611C59.0486 132.574 57.8924 135.35 55.7606 137.482C53.677 139.566 50.9009 140.722 47.9381 140.722C45.0656 140.728 42.2413 139.566 40.0674 137.482ZM42.2895 129.617C42.2895 132.809 44.8368 135.405 47.9381 135.405C51.0876 135.405 53.6348 132.815 53.6348 129.617C53.6348 126.42 51.0876 123.83 47.9381 123.83C44.8368 123.83 42.2895 126.42 42.2895 129.617Z" fill="url(#paint2_linear)"/>
+                <path d="M63.5711 137.946C61.6742 136.139 60.6565 133.688 60.6565 131.051V119.013H66.4917V131.051C66.4917 133.225 68.2983 134.983 70.5626 134.983C72.8328 134.983 74.6816 133.225 74.6816 131.051V119.013H80.5169V131.051C80.5169 133.64 79.451 136.097 77.5541 137.946C75.7053 139.752 73.2484 140.722 70.5626 140.722C67.8768 140.728 65.3777 139.752 63.5711 137.946Z" fill="url(#paint3_linear)"/>
+                <path d="M82.5162 140.216V119.013H88.3514V120.723C90.0195 119.055 92.5186 118.501 94.1867 118.501H95.5778L94.1867 124.288H93.3075C90.5735 124.288 88.3575 126.42 88.3575 128.961V140.21H82.5162V140.216Z" fill="url(#paint4_linear)"/>
+                <path d="M112.307 140.216V128.877C112.307 126.378 110.314 124.433 107.814 124.433C105.406 124.433 103.322 126.426 103.322 128.877V140.216H97.5349V119.013H103.328V120.542C104.761 119.109 106.291 118.597 107.82 118.597C110.597 118.597 113.192 119.663 115.131 121.56C117.076 123.553 118.142 126.143 118.142 128.871V140.21H112.307V140.216Z" fill="url(#paint5_linear)"/>
+                <path d="M130.162 140.728C128.819 140.728 127.428 140.403 126.133 139.801C124.929 139.295 123.821 138.458 122.803 137.392C121.183 135.633 120.214 133.321 119.979 130.912C119.931 130.497 119.888 130.081 119.888 129.617C119.888 128.69 120.027 127.721 120.262 126.745C120.677 124.89 121.557 123.18 122.809 121.885C123.736 120.868 124.802 120.079 126.139 119.434C127.392 118.832 128.777 118.555 130.21 118.555C131.691 118.555 133.034 118.832 134.281 119.434C135.672 120.085 136.78 120.916 137.611 121.885C138.815 123.18 139.743 124.848 140.207 126.745C140.435 127.624 140.532 128.552 140.532 129.617C140.532 129.991 140.532 130.358 140.532 130.683H124.977L125.025 131.009C125.627 133.881 127.801 135.965 130.21 135.965H130.258C131.601 135.874 133.083 135.037 133.962 134.297L134.474 133.881L138.316 137.211L137.623 137.813C137.117 138.277 136.467 138.831 135.774 139.204H135.726C134.058 140.174 132.252 140.686 130.216 140.734H130.162V140.728ZM125.627 126.558L125.441 126.932H135.022L134.835 126.558C133.769 124.565 132.011 123.367 130.204 123.367C128.397 123.367 126.597 124.613 125.627 126.558Z" fill="url(#paint6_linear)"/>
+                <path d="M145.428 146.997L148.228 140.264L139.755 119.019H145.958L151.233 132.213L156.604 119.019H162.759L151.486 147.003H145.428V146.997Z" fill="url(#paint7_linear)"/>
+                <path d="M29.4205 101.483C27.5236 99.6763 26.5059 97.2254 26.5059 94.5878V82.5499H32.3412V94.5878C32.3412 96.7617 34.1478 98.5201 36.412 98.5201C38.6823 98.5201 40.5311 96.7617 40.5311 94.5878V82.5499H46.3663V94.5878C46.3663 97.1772 45.3004 99.6342 43.4035 101.483C41.5548 103.289 39.0978 104.259 36.412 104.259C33.7262 104.259 31.2271 103.283 29.4205 101.483Z" fill="url(#paint8_linear)"/>
+                <path d="M48.1609 103.747V82.5499H53.9962V84.2601C55.6642 82.592 58.1634 82.038 59.8314 82.038H61.2225L59.8314 87.8251H58.9462C56.2122 87.8251 53.9962 89.9569 53.9962 92.4981V103.747H48.1609Z" fill="url(#paint9_linear)"/>
+                <path d="M63.1435 103.747V82.5499H68.9788V84.2601C70.6469 82.592 73.146 82.038 74.8141 82.038H76.2052L74.8141 87.8251H73.9349C71.2009 87.8251 68.9848 89.9569 68.9848 92.4981V103.747H63.1435Z" fill="url(#paint10_linear)"/>
+                <path d="M78.4393 101.019C76.3557 98.8453 75.1995 96.021 75.1995 93.1485C75.1995 90.2339 76.3557 87.4096 78.4393 85.2778C80.5711 83.2424 83.3472 82.0862 86.31 82.0862C89.3631 82.0862 92.1453 83.2424 94.1325 85.2778C96.2643 87.4096 97.4205 90.1857 97.4205 93.1485C97.4205 96.1113 96.2643 98.8874 94.1325 101.019C92.0489 103.103 89.2728 104.259 86.31 104.259C83.4375 104.259 80.6132 103.103 78.4393 101.019ZM80.6614 93.1485C80.6614 96.3401 83.2087 98.9356 86.31 98.9356C89.4595 98.9356 92.0008 96.3462 92.0008 93.1485C92.0008 89.9508 89.4535 87.3614 86.31 87.3614C83.2027 87.3614 80.6614 89.9569 80.6614 93.1485Z" fill="url(#paint11_linear)"/>
+                <path d="M103.34 114.394C102.461 113.93 101.672 113.19 101.305 112.864L100.564 112.124L104.731 108.468L105.333 108.98C106.586 109.908 108.158 110.552 109.452 110.648C112.602 110.6 115.191 107.914 115.191 104.675V101.989L114.962 102.218C113.343 103.789 111.813 104.024 110.103 104.114H109.314C106.441 104.024 103.9 102.958 101.907 100.965C99.8233 98.8332 98.6671 96.0571 98.6671 93.1425C98.6671 90.2279 99.8233 87.4517 101.907 85.32C104.039 83.2364 106.815 82.1283 109.729 82.1283C112 82.1283 113.571 82.7305 114.962 84.1216L115.191 84.3083V82.5499H120.792V104.723C120.792 107.776 119.587 110.6 117.413 112.732C115.33 114.906 112.506 116.062 109.452 116.062C107.23 116.062 105.099 115.508 103.34 114.394ZM104.267 93.1485C104.267 96.2016 106.767 98.7489 109.729 98.7489C112.692 98.7489 115.191 96.2016 115.191 93.1485C115.191 90.0954 112.692 87.4999 109.729 87.4999C106.767 87.4999 104.267 90.0954 104.267 93.1485Z" fill="url(#paint12_linear)"/>
+                <path d="M125.519 100.971C123.435 98.8393 122.279 96.0631 122.279 93.1485C122.279 90.2339 123.435 87.4577 125.519 85.326C127.603 83.2424 130.379 82.1343 133.342 82.1343C135.287 82.1343 137.045 82.8269 138.575 84.2179L138.803 84.4046V82.5559H144.404V103.759H138.803V102.091L138.575 102.32C136.907 103.94 135.01 104.169 133.342 104.169C130.427 104.169 127.651 103.055 125.519 100.971ZM127.88 93.1485C127.88 96.2016 130.379 98.7489 133.342 98.7489C136.304 98.7489 138.803 96.2016 138.803 93.1485C138.803 90.1375 136.304 87.5481 133.342 87.5481C130.379 87.5481 127.88 90.1375 127.88 93.1485Z" fill="url(#paint13_linear)"/>
+                <path d="M149.516 101.019L149.468 100.971C147.433 98.8874 146.277 96.1113 146.277 93.1485C146.277 90.1857 147.433 87.3614 149.468 85.2778C151.552 83.2424 154.328 82.0862 157.339 82.0862C160.392 82.0862 163.174 83.1942 165.162 85.2778C165.625 85.7415 165.993 86.157 166.318 86.5725L166.872 87.4036L162.337 90.7819L161.687 89.9027C160.579 88.4213 158.953 87.4939 157.333 87.4939C154.418 87.4939 151.919 90.0833 151.919 93.1425C151.919 96.2016 154.418 98.7911 157.333 98.7911C158.953 98.7911 160.573 97.8637 161.687 96.292L162.289 95.4609L167.01 98.8393L166.318 99.7185C166.227 99.857 166.089 99.9955 165.944 100.134C165.716 100.411 165.433 100.736 165.156 101.013C163.12 103.049 160.344 104.205 157.333 104.205C154.376 104.211 151.6 103.055 149.516 101.019Z" fill="url(#paint14_linear)"/>
+                <path d="M172.575 110.528L175.375 103.795L166.902 82.5499H173.105L178.38 95.744L183.751 82.5499H189.906L178.633 110.534H172.575V110.528Z" fill="url(#paint15_linear)"/>
+                <path d="M93.1509 87.9817L96.9026 84.23V86.3979H98.6731V81.207H93.4822V82.9774H95.6501L91.8984 86.7291L93.1509 87.9817Z" fill="url(#paint16_linear)"/>
+                <path d="M10.5537 107.306C7.24166 106.638 4.01991 105.024 1.20164 102.561L0.352539 101.802L4.2909 97.3278L5.14 98.0865C7.19951 99.875 9.48183 101.085 11.716 101.531H11.7581C12.4266 101.664 13.101 101.754 13.7695 101.754C14.8896 101.754 15.9193 101.531 16.7684 101.128C17.8403 100.682 19.0929 99.6944 19.0929 97.8637C19.0929 96.8821 18.5991 96.1173 17.5693 95.4911C16.3168 94.7323 14.6186 94.3288 13.4081 94.106C12.8722 94.0157 8.30755 93.0762 6.20588 91.914C4.82083 91.0649 3.7429 89.993 2.98414 88.7344C2.22537 87.4397 1.86405 86.0065 1.86405 84.4408C1.86405 82.7426 2.40001 81.0383 3.42976 79.4726C4.41134 78.1779 5.75424 77.1 7.36812 76.3412C8.97599 75.5824 10.7705 75.179 12.6915 75.179C13.4503 75.179 14.2572 75.2693 15.0642 75.3596C18.0149 75.8956 20.9236 77.2385 23.4769 79.3883L24.326 80.1049L20.5201 84.7117L19.671 83.9951C16.7624 81.6225 14.2572 81.0865 12.6494 81.0865C11.6196 81.0865 10.6802 81.3093 9.87326 81.6706C8.62069 82.2548 7.81375 83.3267 7.81375 84.3986C7.81375 85.3802 8.16904 86.0065 9.02416 86.5906C9.87326 87.1747 11.174 87.6203 13.2275 88.066C13.4985 88.1081 13.8538 88.1985 14.2091 88.2888C16.0879 88.6441 18.5931 89.1861 20.3394 90.2098C21.863 91.0167 23.0252 92.1308 23.8322 93.4315C24.6391 94.7263 25.0426 96.2498 25.0426 97.8637C25.0426 99.875 24.5066 101.67 23.4347 103.187C22.4953 104.482 21.1102 105.602 19.2735 106.499C17.7078 107.306 15.9615 107.661 13.7695 107.661C12.7457 107.661 11.6738 107.529 10.5537 107.306Z" fill="url(#paint17_linear)"/>
+                <path d="M104.406 76.4797L107.206 69.7472L98.7333 48.4957H104.936L110.211 61.6898L115.583 48.4957H121.737L110.464 76.4797H104.406Z" fill="url(#paint18_linear)"/>
+                <path d="M70.0326 44.2442H75.9342L83.1184 57.1673L90.14 44.2442H96.0836L97.3663 71.7826H91.1336L90.3507 53.7829L84.654 64.5141H81.4322L75.4042 53.9034L74.6997 71.7766H68.756L70.0326 44.2442Z" fill="url(#paint19_linear)"/>
+                <defs>
+                <linearGradient id="paint0_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint3_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint4_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint5_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint6_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint7_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint8_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint9_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint10_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint11_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint12_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint13_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint14_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint15_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint16_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint17_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint18_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                <linearGradient id="paint19_linear" x1="0.352539" y1="148.882" x2="251.018" y2="148.882" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#A84088"/>
+                <stop offset="0.182292" stop-color="#A11552"/>
+                <stop offset="0.359375" stop-color="#F53694"/>
+                <stop offset="0.53125" stop-color="#FC6D68"/>
+                <stop offset="0.713542" stop-color="#FEA94E"/>
+                <stop offset="0.864583" stop-color="#BADCC8"/>
+                <stop offset="1" stop-color="#6AC6E6"/>
+                </linearGradient>
+                </defs>
+                </svg>
+            </a> -->
+        </div>
+        <div class="col">
+            <ul class="">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <!-- <li><a href="https://www.yellow13.in/contact-us">Contact Us</a></li> -->
+                <li><a href="membership.html">Membership</a></li>
+                <li><a href="book-a-consultation.html">Book a Consultation</a></li>
+            </ul>
+        </div>
+        <div class="col">
+            <ul class="">
+                <li><a href="https://www.mysurrogacyjourney.com/blog">Blog</a></li>
+                <li><a href="login.html">Sign In</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <!-- <li><a href="https://www.yellow13.in/membership-pricing">Pricing</a></li> -->
+                <li><a href="https://www.yellow13.in/privacy-policy">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <div class="newsletter-sec">
+                <h4 class="animated">Follow the journey</h4>
+                <form class="form-inline d-flex">
+                    <input type="text" class="form-control" placeholder="Your Email" value=""/>
+                    <button type="submit" class="btn btn-black" >Subscribe</button>
+                </form>
+                <!-- <ul class="social-list">
+                    <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-snapchat-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube-square"></i></a></li>
+                </ul> -->
+                <ul class="social-list">
+                    <li><a href="https://www.facebook.com/MySurrogacyJny" rel="noopener"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.instagram.com/officialmysurrogacyjourney/" rel="noopener"><i class="fab fa-instagram-square"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/my-surrogacy-journey/" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+                    <!-- <li><a href="#" rel="noopener"><i class="fab fa-tiktok square"></i></a></li> -->
+                    <!-- <li><a href="#" rel="noopener"><i class="fab fa-snapchat-square"></i></a></li> -->
+                    <li><a href="https://twitter.com/MySurrogacyJny" rel="noopener"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCw0GF_GLc49Kk5YYrZaF-wA" rel="noopener"><i class="fab fa-youtube-square"></i></a></li>
+                </ul>
+                <ul class="app-list">
+                    <li><a href="#"><img src="resources/images/app-store.png" alt="App Store"></a></li>
+                    <li><a href="#"><img src="resources/images/play-store.png" alt="Google Play Store"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bt">
+        <p class="copy-txt">All Rights reserved | MySurrogacyJourney | Developed by <a href="https://www.brandastronauts.com">BrandAstronauts</a></p>
+    </div>
+</footer><!-- Footer :: End -->
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+<script src="resources/js/jquery-1.11.3.min.js"></script>
+<script src="resources/js/bootstrap.bundle.min.js"></script>
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+<!-- <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script> -->
+<script src="resources/js/plugins.js"></script>
+<script src="resources/js/rtop.videoPlayer.1.0.0.min.js"></script>
+<script src="resources/js/jquery.magnific-popup.js"></script>
+<script src="resources/js/main.js"></script>
+
+<!-- Codebird.js - required for TWITTER -->
+<!-- <script src="https://www.yellow13.in/vendors/bower_components/codebird-js/codebird.js"></script> -->
+<!-- doT.js for rendering templates -->
+<!-- <script src="https://www.yellow13.in/vendors/bower_components/doT/doT.min.js"></script> -->
+<!-- Moment.js for showing "time ago" and/or "date"-->
+<!-- <script src="https://www.yellow13.in/vendors/bower_components/moment/min/moment.min.js"></script> -->
+<!-- Social-feed js -->
+<!-- <script src="https://www.yellow13.in/vendors/bower_components/social-feed/jquery.socialfeed.js"></script> -->
+
+
+<script>
+    $(document).ready(function(){
+        var vid = $('#my_video').RTOP_VideoPlayer({
+            showFullScreen: true,
+            showTimer: true,
+            showSoundControl: true
+        });
+    });
+
+    window.onscroll = function() {stickyheader()};
+  
+    var header = document.querySelector("header");
+    var sticky = header.offsetTop;
+    
+    function stickyheader() {
+      if (window.pageYOffset > sticky) {
+        header.classList.add("sticky");
+      } else {
+        header.classList.remove("sticky");
+      }
+    }
+
+</script>
+</body>
+</html>
