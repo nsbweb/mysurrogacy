@@ -293,6 +293,13 @@ $(function(){
     $('.ajax-popup').magnificPopup({
         type: 'ajax'
     });
+    $('.iframe-popup').magnificPopup({
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: true,
+        fixedContentPos: false
+    });
     $('.popup-gallery').magnificPopup({
         delegate: 'a',
         type: 'image',

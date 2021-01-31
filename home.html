@@ -181,10 +181,10 @@
                     <h2 class="main-tl">Where will your journey begin?</h2>
                     <!-- <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> -->
                 </div>
-                <div class="video-container">
+                <div class="video-container" id="vidwrap">
                     <!-- <div class="myVideo" id="my_video" data-video="https://www.yellow13.in/website/videos/MSJ-Promo-Video-LOW-RES.mp4" data-poster="resources/images/video-snap-01.jpg" data-type='video/mp4'></div> -->
-                    <div class="myVideo" id="my_video" data-video="https://youtu.be/uMTrpr-lwGM" data-poster="resources/images/video-snap-01.jpg" data-type='video/mp4'></div>
-                    <!-- <a href="#" class="btn btn-play"><i class="fa fa-play"></i></a> -->
+                    <!-- <div class="myVideo" id="my_video" data-video="https://youtu.be/uMTrpr-lwGM" data-poster="resources/images/video-snap-01.jpg" data-type='video/mp4'></div> -->
+                    <a href="#" class="btn btn-play" onclick="play();"><i class="fa fa-play"></i></a>
                 </div>
             </div>
         </div>
@@ -513,6 +513,11 @@
       }
     }
 
+</script>
+<script type="text/javascript">
+    function play(){
+        document.getElementById('vidwrap').innerHTML = '<iframe width="100%" height="515" src="https://www.youtube.com/embed/uMTrpr-lwGM?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    }
 </script>
 </body>
 </html>
