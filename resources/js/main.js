@@ -394,6 +394,28 @@ $owlSingle.owlCarousel({
     autoplayHoverPause:true
 });
 
+
+var $ovowl = $('.ov-owl-cara');
+
+$ovowl.children().each( function( index ) {
+    $(this).attr( 'data-position', index ); // NB: .attr() instead of .data()
+});
+
+$ovowl.owlCarousel({
+    center: true,
+    loop: true,
+    responsiveClass:true,
+    nav:true,
+    navText:[,],
+    dots:false,
+    autoWidth:true
+});
+
+$(document).on('click', '.owl-item>div', function() {
+    var $speed = 300; 
+    $ovowl.trigger('to.ovowl.carousel', [$(this).data( 'position' ), $speed] );
+});
+
 var vid = $('#my_video').RTOP_VideoPlayer({
     showFullScreen: true,
     showTimer: true,

@@ -701,6 +701,10 @@ header {
                 cursor: auto;
                 margin: 0;
                 opacity: 1;
+                @media (min-width:$ipadLandscape) {                  
+                  min-width:30rem;
+                  margin-left: -4rem;
+                }
                 & .img-cont { 
                     &:before{
                         display: block;
@@ -714,6 +718,9 @@ header {
                 }
                 & .text-cont {
                     display: block;
+                    @media (min-width:$ipadLandscape) {     
+                      margin-top: -2.5rem;
+                    }
                 }
             }
             &:not(.center) > div:hover {
