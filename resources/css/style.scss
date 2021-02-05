@@ -634,8 +634,7 @@ header {
 .center-big {
     &.up-in { margin-top: -6rem; 
         @media (max-width:$mobileLarge) {
-            margin-left: -0;
-            margin-right: -0;
+            margin: -2.0rem -10rem 0;
             width: auto;
         }
     }
