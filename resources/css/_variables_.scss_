@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Effra';
+    src: url('../fonts/effra_std_lt-webfont.woff2') format('woff2'),
+         url('../fonts/effra_std_lt-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Effra';
+    src: url('../fonts/effra_std_rg-webfont.woff2') format('woff2'),
+         url('../fonts/effra_std_rg-webfont.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Effra';
+    src: url('../fonts/effra_std_bd-webfont.woff2') format('woff2'),
+         url('../fonts/effra_std_bd-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+$basefont : 16px;
+
+//colors
+$color00: #000000;
+$color01: #0D1321;
+$color02: #FFFFFF;
+$color03: #807E7E;
+$color04: #ABE9FF;
+$color05: #F2C94C;
+$color06: #636D83;
+$color07: #5C709F;
+$color08: #999999;
+$color09: #202020;
+$color10: #939090;
+$color11: #210D20;
+$color12: #B7B7B7;
+$color13: #484545;
+$color14: #0C0C0C;
+$color15:#FECE54;
+
+
+
+$gradiantColor00: linear-gradient(
+    90deg,
+    #A84088 0%, 
+    #A11552 18.6%, 
+    #F53694 36.68%,
+    #FC6D68 54.22%, 
+    #FEA94E 72.82%, 
+    #BADCC8 88.23%, 
+    #6AC6E6 102.05%);
+
+//Width
+$w6rem:6rem;
+
+//Weight
+$fReg:400;
+$fMed:500;
+$fBold:700;
+
+//fonts
+$basfontfamily : 'Effra';
+$fontAwesomefree:"Font Awesome 5 Free";
+
+/* Media Queries */
+$mobileSmall : 575px;
+$mobileLarge : 767px;
+$ipadPotrait : 991px;
+$ipadLandscape : 1200px;
+$normalDesktop : 1400px;
+$largeDesktop : 1800px;
