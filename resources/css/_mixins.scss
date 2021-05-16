@@ -50,7 +50,15 @@
             top:calc(50% - 0.4rem);
             width:$w6rem;
             height:0.8rem;
-         }    
+            
+            @media (max-width:$mobileLarge) {
+                width: 3rem;        
+            }
+         }  
+            
+         @media (max-width:$mobileLarge) {
+            padding-right:3rem + 1rem;
+         }  
 }
 
 @mixin clear_0 {

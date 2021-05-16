@@ -44,7 +44,7 @@ h1 {
 
 p { 
     color:$color02; 
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     &:last-child{
         margin-bottom: 0;       
     }
@@ -286,6 +286,7 @@ header {
 .navbar {
     padding: 0;
     z-index: 1030;
+    background-color: #000;
     & .navbar-brand {
         padding: 0;
         position: absolute;
@@ -304,7 +305,7 @@ header {
                 color: $color16;
                 font-weight: 700;
             }
-            & + .nav-item { margin-left:2rem;  }
+            & + .nav-item { margin-left:1.15rem;  }
         }
     }
 }
@@ -316,7 +317,7 @@ header {
     position: relative;
     z-index: 1;
     padding:0 0 0 0; 
-    margin-top:-5rem;
+    /* margin-top:-5rem; */
     & .img-cont{
         & img {
             width: 100%;
@@ -354,7 +355,7 @@ header {
             @include gradientColorAnim; 
             font-weight: 700;
             padding: 0;
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             @include btnArrow;
             &:hover{
                 animation: rainbow-text-simple-animation 0.5s ease-in forwards;
@@ -483,7 +484,6 @@ header {
 }
 /*Banner CSS */
 
-
 /*Main Content CSS*/
 .main-content { 
     padding:1.5rem 0; 
@@ -558,8 +558,8 @@ header {
                     }
                     & video {
                         object-fit: cover;
-                    }
-                    &:before {
+                    }	
+                    &:before {	
                         display: none;
                     }
                 }
@@ -584,10 +584,10 @@ header {
      .btn-loadmore {
         @include gradientColor;
         font-weight: 700;
-        position: relative;
-        outline: 0;
-        &:focus {
-            box-shadow: none;
+        position: relative;	
+        outline: 0;	
+        &:focus {	
+            box-shadow: none;	
         }
         &:after {
             @include fontAwesome;
@@ -600,9 +600,9 @@ header {
             // width:1rem;
             // left:calc(50% - 0.5rem);
             // top:100%;
-        }
-        &.collapsed::after{
-            content: "\f106";
+        }	
+        &.collapsed::after{	
+            content: "\f106";	
         }
      }
  }  
@@ -625,17 +625,22 @@ header {
         font-weight: $fReg;
     }
     & p { 
-        font-size: 1.05rem;
-        line-height: 1.5rem;
+        font-size: 1.15rem;
+        line-height: 1.6rem;
         color: $color03;
     }
  }
 
 .center-big {
-    &.up-in { margin-top: -6rem; 
+    &.up-in { 
+        margin-top: -6rem; 
         @media (max-width:$mobileLarge) {
             margin: -2.0rem -10rem 0;
             width: auto;
+        }
+        @media (max-width:$mobileLarge) {
+          margin: -2.0rem 0 0;
+          width: auto;
         }
     }
     .owl-stage-outer { 
@@ -701,12 +706,15 @@ header {
                 margin: 0;
                 opacity: 1;
                 @media (min-width:$ipadPotrait) {                  
-                  width:30rem;
+                  width:auto;
                   margin-left: -0rem;
                   margin-right: -0rem;
                 }
                 @media ( max-width:$mobileLarge) {         
                   width:100%;
+                  max-width: 345px;
+                  margin: 0 auto; 
+                  max-width:100%;
                 }
                 & .img-cont { 
                     &:before{
@@ -714,6 +722,9 @@ header {
                     }
                     img {            
                         filter: blur(0px);
+                        max-width: 345px;
+                        margin: 0 auto;
+                        max-width:100%;
                     }                    
                     & figcaption {
                         display: flex;
@@ -731,6 +742,8 @@ header {
             }
             @media (max-width:$mobileLarge) {
                 width: 100vw;
+                max-width: 345px;
+                max-width:100%;
             }
         }
     }
@@ -739,27 +752,26 @@ header {
 .blog-list {
     > div { 
         position: relative;
-        & > a {
-          display: inline-block;
-          width:100%;
-          height: 100%;
-          color: #fff;
-          text-decoration: none;
-        }
+        & > a {	
+            display: inline-block;	
+            width:100%;	
+            height: 100%;	
+            color: #fff !important;	
+            text-decoration: none;	
+        }	
         & .img-cont, & figure {
             position: relative;
             z-index: 1;
             height: 25rem;
-            overflow: hidden;
+            overflow: hidden;	
             margin: 0;
-            height: 100%;
             & img {
                 width:100%;
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
                 @media (max-width:$mobileLarge) {
-                    //object-position: top;
+                    // object-position: top;
                 }
             }
             &:before {                
@@ -784,14 +796,14 @@ header {
                 justify-content: space-between;
                 & h3 {
                     font-size: 1.5rem;
-                    font-weight: 700;
-                    color: #fff;
-                    @media (max-width:$mobileLarge) {
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 1; /* number of lines to show */
-                        -webkit-box-orient: vertical;
+                    font-weight: 700;	
+                    color: #fff !important;	
+                    @media (max-width:$mobileLarge) {	
+                        overflow: hidden;	
+                        text-overflow: ellipsis;	
+                        display: -webkit-box;	
+                        -webkit-line-clamp: 1; /* number of lines to show */	
+                        -webkit-box-orient: vertical;	
                     }
                 }
                 & p {
@@ -856,6 +868,11 @@ header {
         width:auto;
         .owl-item {
             padding:0 0.625rem;
+            & a {
+              &:hover{           
+                text-decoration: none;
+              }   
+            }
             & .img-cont {
                 
             }
@@ -882,21 +899,82 @@ header {
                 padding: 1.3rem 2.6rem;
                 background: $color09;
                 text-align: center;
-                & .location-name { font-size:0.875rem; color: $color08; }
-                & h4 { font-size: 1.5rem; color: $color02; font-weight: 700; margin-top:1rem; margin-bottom:0rem}
-                & h5 { font-size: 1.05rem; color: $color08; margin-bottom:1rem}
+                display: grid;
+                place-items: center;
+                & .location-name { 
+                  font-size:0.875rem; 
+                  color: $color08; 
+                }
+                & h4 { 
+                  font-size: 1.5rem; 
+                  color: $color02; 
+                  font-weight: 700; 
+                  margin-top:1rem; 
+                  margin-bottom:0rem;
+
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  
+                }
+                & h5 { 
+                  font-size: 1.05rem; 
+                  color: $color08; 
+                  margin-bottom:1rem;
+                  margin-top:0.75rem;
+                }
                 & p {
                     font-size: 1.05rem;
-                    color: $color10;
+                    //color: $color10;
+                    @include gradientColor;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2; 
+                    -webkit-box-orient: vertical;
                     &:last-child{
                         margin-bottom: 0;
                     }
+                }
+            }
+        }       
+        &.owl-cara-default {
+            & .text-cont{
+                min-height: 22rem;
+                padding-bottom: 4rem;
+                
+                min-height: 20rem;
+                padding-bottom: 5rem;
+                & .btn-msj {
+                    position: absolute;
+                    left: calc(50% - 6rem);
+                    bottom: 2rem;
+                    min-width: 12rem;
+                    bottom: 1.5rem;
+                }
+                & .btn-link {
+                    display: inline;
+                    padding: 0;
+                    text-decoration: underline !important;
+                    border: 0;
+                    white-space: normal;
+                    user-select: initial;
                 }
             }
         }
     }
  }
 
+// .infoBox{
+//     & .infoInnerBox {
+//         padding:1.5rem;
+//         & p{
+//             color:$color03;
+//         }
+//     }
+// }
 .infoBox{
     & .infoInnerBox {
         padding:0rem;
@@ -914,8 +992,43 @@ header {
         }
         & p{
             color:$color03;
+            & a {
+              background-image: linear-gradient(90deg, #A84088 0%, #A11552 18.6%, #F53694 36.68%, #FC6D68 54.22%, #FEA94E 72.82%, #BADCC8 88.23%, #6AC6E6 102.05%);
+              background-size: 100%;
+              background-repeat: repeat;
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
         }
     }
+}
+
+.eventBox {
+  & .btn-link {
+    & span {
+      background-image: linear-gradient(90deg, #A84088 0%, #A11552 18.6%, #F53694 36.68%, #FC6D68 54.22%, #FEA94E 72.82%, #BADCC8 88.23%, #6AC6E6 102.05%);
+      /* Set the background size and repeat properties. */
+      background-size: 100%;
+      background-repeat: repeat;
+      /* Use the text as a mask for the background. */
+      /* This will show the gradient as a text color rather than element bg. */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      background: url(../images/long-arrow.png) no-repeat left top;
+      background-size: contain;
+      right: 0;
+      top: calc(50% - 0.4rem);
+      width: 6rem;
+      height: 0.8rem;
+      @media (max-width:$mobileLarge) {
+        width: 3rem;        
+      }
+    }
+  }
 }
  
 .Our-Stories {
@@ -928,7 +1041,7 @@ header {
                     border-radius: 100%;
                     width:2.5rem;
                     height:2.5rem;
-                    top: 18rem;
+                    top: 14rem;
                     &:before {
                         background-size:25% ;
                     }          
@@ -942,14 +1055,13 @@ header {
                         }
                     }                    
                     @media ( max-width :$mobileLarge){
-                        // top: calc(50% - 9rem);
+                        // top: calc(50% - 9rem);	
                         top: calc(0% + 12rem);
                     }
-
                 }      
             }
-            & .owl-dots {
-              display: none !important;
+            & .owl-dots {	
+              display: none !important;	
             }
             @media ( max-width :$mobileLarge){
                 max-width: 100%;
@@ -957,9 +1069,13 @@ header {
         }
         & .img-cont {
             & img {
-                height: 38rem;
-                object-fit: contain;
+                /* height: 38rem; */
+                // object-fit: contain;
                 object-position: top;
+                //height: 28rem;
+                max-height: 28rem;
+                // object-fit: cover;
+                object-fit: contain;
                 @media (min-width:$mobileLarge) {
                   margin-left: 3rem;
                   width: calc(100% - 3rem);
@@ -979,11 +1095,12 @@ header {
               padding-right: 4rem;
             }
             & .cont-in {
-                height: 510px;
+                // height: 400px;
                 overflow: hidden;
                 transition: all .3s ease-in;
+                height: 23.8rem;
                 @media (max-width:$ipadPotrait){
-                  height: 367px;
+                  height: auto;
                 }
             }
             & h4 { font-size: 1.85rem;}
@@ -996,9 +1113,11 @@ header {
             & .btn-container {
              position: absolute;
              left: 0;
-             right: 0; 
-             bottom: 0;
+             right: 0;
              text-align: center;
+             @media (max-width:$ipadPotrait){
+              display: none;
+             }
             }
         }
     }     
@@ -1122,6 +1241,9 @@ header {
  .infoBox {
     @include gradientBdrBox;
     padding: 2rem 2rem;
+    @media (max-width:$mobileLarge) {
+      padding: 1rem;
+    }
  } 
 
  .uc-list { 
@@ -1280,9 +1402,21 @@ header {
             }
         }
     }
-    & .r-tabs-panel { padding: 0; display: none; border:1px solid $color13; background: $color14;
+    & .r-tabs-panel { 
+      padding: 0; 
+      display: none; 
+      border:1px solid $color13; 
+      background: $color14;
+      @media (max-width:$mobileLarge) {
+        display: block;
+        margin-bottom: 4rem;
+        min-height: inherit !important;
+      }
         & .text-box {
             padding: 4rem;
+            @media (max-width:$mobileLarge) {
+              padding: 1rem;
+            }
             .sub-tl{ 
                 font-size:1.5rem;
                 font-weight:700;
@@ -1478,10 +1612,10 @@ footer {
             & > li { width:100%; } 
         }
     } 
-    .banner { padding-top: 5rem; }
+    .banner { padding-top: 0rem; }
     .banner .text-cont,
     .banner.v2 .text-cont {
-        padding-top: 2rem; 
+        padding-top: 2rem;
         position: static;
         text-align: center;
     }
@@ -1570,6 +1704,20 @@ footer {
         background: $color02;
     }
 }
+
+
+/*Colored Title css*/
+.colored-tl {
+    background-image: linear-gradient(90deg, #A84088 0%, #A11552 15.6%, #F53694 30.68%, #FC6D68 48.22%, #FEA94E 60.82%, #BADCC8 75.23%, #6AC6E6 95.05%);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    position: relative;
+}
+
+
 
 .grid {
     position: relative;
@@ -1863,15 +2011,23 @@ footer {
   }
   
   figure.effect-bubba img {
-    opacity: 0.7;
-    -webkit-transition: opacity 0.35s;
-    transition: opacity 0.35s;
+    // opacity: 0.7;
+    // -webkit-transition: opacity 0.35s;
+    // transition: opacity 0.35s;
   }
   
   figure.effect-bubba:hover img {
-    opacity: 0.4;
+    // opacity: 0.4;
   }
-  
+    
+  figure.effect-bubba figcaption {
+    background-color: rgba(0,0,0,0);
+  }
+
+  figure.effect-bubba:hover figcaption{
+    background-color: rgba(0,0,0,0.3);
+  }
+
   figure.effect-bubba figcaption::before,
   figure.effect-bubba figcaption::after {
     position: absolute;
@@ -2727,4 +2883,46 @@ footer {
     transform: scale(1);
   }
 
-  #vidwrap {height:515px;width:100%; background: black url('../images/video-snap-01.jpg') no-repeat center; background-size:cover ; overflow:hidden;cursor:pointer;}
+  #vidwrap {
+    height:515px;
+    width:100%; 
+    background: black url('../images/video-snap-01.jpg') no-repeat center; 
+    background-size:cover ; 
+    overflow:hidden;
+    cursor:pointer;
+  }
+
+
+.btn-msj {
+	border-radius: 100rem;
+	padding: 1rem;
+	//font-family: 'Avenir Next';
+	font-size: 1rem;
+	padding: .5rem 3rem;
+	color: #ffffff;
+	box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+	border: solid 3px transparent;
+	background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(101deg, #f53694, #6ac6e6);
+	/*background-image:linear-gradient(90deg, #A84088 0%, #A11552 18.6%, #F53694 36.68%, #FC6D68 54.22%, #FEA94E 72.82%, #BADCC8 88.23%, #6AC6E6 102.05%);*/
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	box-shadow: 2px 1000px 1px #000 inset;
+    &:hover {
+        box-shadow: none;
+        color: white;
+    }
+  }
+  .loader {
+    background: $color00 url('../images/logo-white.png') no-repeat center center;
+    position:fixed;
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 100%;
+    min-height: 100vh;  
+    display: block;
+    z-index: 99999;
+    @media (max-width:$ipadPotrait) {
+      background-size: 80% auto;
+    }
+  }
